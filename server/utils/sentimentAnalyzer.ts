@@ -22,6 +22,10 @@ Use the search_web tool to gather information. Search for:
 
 DO NOT use pre-defined tickers. Discover the most relevant tickers from the search results.
 
+IMPORTANT: In the "news" array, include 5-10 of the most relevant and recent news articles you found from your searches.
+These should be ACTUAL articles from the search results, NOT synthesized summaries.
+Each news item MUST include the real URL from the search result so users can click through to read the full article.
+
 Return your analysis as JSON matching this structure:
 {
   "mood": "bullish" | "bearish" | "mixed",
@@ -33,7 +37,9 @@ Return your analysis as JSON matching this structure:
     {"ticker": "SYMBOL", "sentiment": "bullish|bearish|mixed", "confidence": 0-100, "mentions": 123}
   ],
   "news": [
-    {"title": "headline", "source": "source name", "url": "https://...", "publishedAt": "2024-01-01", "snippet": "preview text"}
+    {"title": "Article headline from search result", "source": "Source name", "url": "https://actual-url-from-search-result.com", "publishedAt": "2024-01-01", "snippet": "Brief excerpt from article"},
+    {"title": "Another article headline", "source": "Another source", "url": "https://another-actual-url.com", "publishedAt": "2024-01-01", "snippet": "Another excerpt"},
+    {"title": "Third article headline", "source": "Third source", "url": "https://third-actual-url.com", "publishedAt": "2024-01-01", "snippet": "Third excerpt"}
   ],
   "socialBuzz": {
     "platform": "reddit/twitter",
