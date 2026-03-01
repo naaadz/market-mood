@@ -20,11 +20,21 @@
     <main>
       <div class="cards-wrap flex justify-center">
         <div class="cards flex gap-4">
-          <div class="card bullish pos-1 of-3"><span>Card 1</span></div>
-          <div class="card bullish pos-2 of-3"><span>Card 2</span></div>
-          <div class="card bullish pos-3 of-3"><span>Card 3</span></div>
-          <div class="card mixed pos-1 of-1"><span>Card 4</span></div>
-          <div class="card bearish pos-1 of-1"><span>Card 5</span></div>
+          <DashboardPodCard mood="bullish" :position="1" :group-size="1"
+            ><span>Card 1</span></DashboardPodCard
+          >
+          <DashboardPodCard mood="mixed" :position="1" :group-size="3"
+            ><span>Card 2</span></DashboardPodCard
+          >
+          <DashboardPodCard mood="mixed" :position="2" :group-size="3"
+            ><span>Card 3</span></DashboardPodCard
+          >
+          <DashboardPodCard mood="mixed" :position="3" :group-size="3"
+            ><span>Card 4</span></DashboardPodCard
+          >
+          <DashboardPodCard mood="bearish" :position="1" :group-size="1"
+            ><span>Card 5</span></DashboardPodCard
+          >
         </div>
       </div>
     </main>
