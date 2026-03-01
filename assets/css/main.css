@@ -1,0 +1,210 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Pixelify+Sans:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+/* ================================================
+   Theme colors — Tailwind v4 ready
+   When upgrading to v4, replace :root {} with
+   @theme {} and replace @tailwind directives with
+   @import "tailwindcss";
+   ================================================
+
+   Brand palette — converted from hex to oklch:
+     green  #22ECA3 → oklch(83.3% 0.182 160.8)
+     blue   #227AEC → oklch(58.3% 0.195 257.6)
+     purple #7270FD → oklch(61.2% 0.210 278.8)
+     pink   #FD70FB → oklch(75.8% 0.239 328.2)
+     orange #FD8470 → oklch(73.8% 0.156  30.9)
+*/
+@theme {
+  --color-dark: #15051D;
+  --color-light: #ffffff;
+
+  --color-green:  oklch(83.3% 0.182 160.8);
+  --color-blue:   oklch(58.3% 0.195 257.6);
+  --color-purple: oklch(61.2% 0.210 278.8);
+  --color-pink:   oklch(75.8% 0.239 328.2);
+  --color-orange: oklch(73.8% 0.156  30.9);
+
+  --font-mono:    'Ubuntu Mono', monospace;
+  --font-display: 'Pixelify Sans', sans-serif;
+}
+
+body {
+  @apply bg-dark;
+}
+
+/* ================================
+   Layout
+   ================================ */
+.scene {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 48px;
+}
+
+.cards {
+  display: flex;
+  gap: 6px;
+}
+
+/* ================================
+   Card base
+   ================================ */
+.card {
+  width: 160px;
+  height: 220px;
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  transition: transform 0.25s cubic-bezier(.34, 1.56, .64, 1),
+              box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 24px 48px oklch(0% 0 0 / 0.5);
+}
+
+.card span {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: oklch(100% 0 0 / 0.85);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ================================
+   Group types — set color vars
+   ================================ */
+.bullish {
+  --color-from: var(--color-green);
+  --color-to:   var(--color-blue);
+}
+
+.mixed {
+  --color-from: var(--color-blue);
+  --color-mid:  var(--color-purple);
+  --color-to:   var(--color-pink);
+}
+
+.bearish {
+  --color-from: var(--color-pink);
+  --color-to:   var(--color-orange);
+}
+
+/* ================================
+   Group sizes — gradient shape
+   More cards = hold --color-from longer
+   ================================ */
+.of-1 {
+  background-image: linear-gradient(to right in oklch,
+    var(--color-from) 0%,
+    var(--color-to)   100%
+  );
+  background-size: 160px 100%;
+}
+
+.of-2 {
+  background-image: linear-gradient(to right in oklch,
+    var(--color-from) 0%,
+    var(--color-from) 33%,
+    var(--color-to)   100%
+  );
+  background-size: 326px 100%;
+}
+
+.of-3 {
+  background-image: linear-gradient(to right in oklch,
+    var(--color-from) 0%,
+    var(--color-from) 50%,
+    var(--color-to)   100%
+  );
+  background-size: 492px 100%;
+}
+
+.of-4 {
+  background-image: linear-gradient(to right in oklch,
+    var(--color-from) 0%,
+    var(--color-from) 60%,
+    var(--color-to)   100%
+  );
+  background-size: 658px 100%;
+}
+
+.of-5 {
+  background-image: linear-gradient(to right in oklch,
+    var(--color-from) 0%,
+    var(--color-from) 70%,
+    var(--color-to)   100%
+  );
+  background-size: 824px 100%;
+}
+
+/* ================================
+   Mixed overrides — 3-stop gradient
+   ================================ */
+.mixed.of-3 {
+  background-image: linear-gradient(to right in oklch,
+    var(--color-from) 0%,
+    var(--color-mid)  50%,
+    var(--color-to)   100%
+  );
+}
+
+.mixed.of-4 {
+  background-image: linear-gradient(to right in oklch,
+    var(--color-from) 0%,
+    var(--color-mid)  55%,
+    var(--color-to)   100%
+  );
+}
+
+.mixed.of-5 {
+  background-image: linear-gradient(to right in oklch,
+    var(--color-from) 0%,
+    var(--color-mid)  60%,
+    var(--color-to)   100%
+  );
+}
+
+/* ================================
+   Card positions — bg offset
+   ================================ */
+.card.pos-1 { background-position:    0px center; }
+.card.pos-2 { background-position: -166px center; }
+.card.pos-3 { background-position: -332px center; }
+.card.pos-4 { background-position: -498px center; }
+.card.pos-5 { background-position: -664px center; }
+
+/* ================================
+   Group labels
+   ================================ */
+.groups {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 4px;
+}
+
+.group-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-family: var(--font-mono);
+}
+
+.bullish-label { color: var(--color-green); }
+.mixed-label   { color: var(--color-purple); }
+.bearish-label { color: var(--color-orange); }
