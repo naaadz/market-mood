@@ -8,10 +8,11 @@
   --color-light: #ffffff;
 
   --color-green: oklch(83.3% 0.182 160.8);
-  --color-blue: oklch(58.3% 0.195 257.6);
-  --color-purple: oklch(61.2% 0.21 278.8);
+  --color-blue: oklch(0.5928 0.1902 257.28);
+  --color-purple: oklch(0.6218 0.2042 279.29);
   --color-pink: oklch(75.8% 0.239 328.2);
   --color-orange: oklch(73.8% 0.156 30.9);
+  /* --color-orange: oklch(0.7186 0.1797 11.96); */
 
   --font-mono: 'Ubuntu Mono', monospace;
   --font-display: 'Pixelify Sans', sans-serif;

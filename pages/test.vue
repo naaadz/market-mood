@@ -20,21 +20,11 @@
     <main>
       <div class="cards-wrap flex justify-center">
         <div class="cards flex gap-4">
-          <DashboardPodCard mood="bullish" :position="1" :group-size="1"
-            ><span>Card 1</span></DashboardPodCard
-          >
-          <DashboardPodCard mood="mixed" :position="1" :group-size="3"
-            ><span>Card 2</span></DashboardPodCard
-          >
-          <DashboardPodCard mood="mixed" :position="2" :group-size="3"
-            ><span>Card 3</span></DashboardPodCard
-          >
-          <DashboardPodCard mood="mixed" :position="3" :group-size="3"
-            ><span>Card 4</span></DashboardPodCard
-          >
-          <DashboardPodCard mood="bearish" :position="1" :group-size="1"
-            ><span>Card 5</span></DashboardPodCard
-          >
+          <DashboardPodCard mood="bullish" :position="1" :group-size="1" />
+          <DashboardPodCard mood="mixed" :position="1" :group-size="3" />
+          <DashboardPodCard mood="mixed" :position="2" :group-size="3" />
+          <DashboardPodCard mood="mixed" :position="3" :group-size="3" />
+          <DashboardPodCard mood="bearish" :position="1" :group-size="1" />
         </div>
       </div>
     </main>
