@@ -1,5 +1,8 @@
 <template>
   <div class="pod-wrap" :class="[mood, { alt }]">
+    <!-- Background -->
+    <div class="card-bg"></div>
+
     <!-- Curve overlay -->
     <div class="pod-curve" aria-hidden="true">
       <div class="pod-curve-fill"></div>
@@ -18,7 +21,8 @@
       </svg>
     </div>
 
-    <div class="card">
+    <!-- Content -->
+    <div class="card-content flex flex-col gap-4 p-8">
       <slot />
     </div>
   </div>
@@ -38,7 +42,6 @@ defineProps<{
 .pod-wrap {
   position: relative;
   width: var(--card-w);
-  height: 100%;
 }
 
 .pod-curve {
@@ -80,24 +83,24 @@ defineProps<{
 }
 
 /* ================================
-   Card base
+   Card base (background layer)
    ================================ */
-.card {
-  width: 100%;
-  height: 100%;
+.card-bg {
+  position: absolute;
+  inset: 0;
   border-radius: 16px;
-  display: flex;
-  align-items: flex-end;
-  padding: 16px;
-  cursor: pointer;
-  position: relative;
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: 0 center;
   opacity: 0.5;
-  transition:
-    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 0.25s ease;
+  z-index: 0;
+}
+
+/* Content layer — above the curve overlay */
+.card-content {
+  position: relative;
+  inset: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 2;
 }
 
 /* ================================
@@ -106,6 +109,7 @@ defineProps<{
    Right: --color-blue at 75% opacity, stop extends past card edge
    ================================ */
 .pod-wrap.bullish {
+  --color-main: var(--color-green);
   --color-from: var(--color-green);
   --color-to: var(--color-blue);
   --color-stroke: var(--color-green);
@@ -116,7 +120,7 @@ defineProps<{
   --mask-size: 360%;
 }
 
-.pod-wrap.bullish .card {
+.pod-wrap.bullish .card-bg {
   background-image: linear-gradient(
     to right,
     var(--color-green) 0%,
@@ -131,17 +135,18 @@ defineProps<{
    Right: --color-pink at 80% opacity, stop extends past card edge
    ================================ */
 .pod-wrap.mixed {
+  --color-main: var(--color-blue-brighter);
   --color-from: var(--color-blue);
   --color-to: var(--color-purple);
-  --color-stroke: #72d9f3;
-  --curve-fill-color: #72d9f3;
+  --color-stroke: var(--color-blue-brighter);
+  --curve-fill-color: var(--color-blue-brighter);
   --curve-x: -0.44;
   --curve-y: 0.6;
   --curve-scale: 3;
   --mask-size: 300%;
 }
 
-.pod-wrap.mixed .card {
+.pod-wrap.mixed .card-bg {
   background-image: linear-gradient(
     to right,
     var(--color-blue) 0%,
@@ -154,6 +159,7 @@ defineProps<{
 
 /* alt variant — pink stroke on the curve */
 .pod-wrap.mixed.alt {
+  --color-main: var(--color-pink);
   --color-stroke: var(--color-pink);
   --curve-fill-color: var(--color-pink);
 }
@@ -164,21 +170,26 @@ defineProps<{
    Right: --color-orange at 80% opacity, stop extends past card edge
    ================================ */
 .pod-wrap.bearish {
+  --color-main: var(--color-orange);
   --color-from: var(--color-pink);
   --color-to: var(--color-orange);
   --color-stroke: var(--color-orange);
   --curve-fill-color: var(--color-orange);
   --curve-x: -1.98;
-  --curve-y: 0.75;
+  --curve-y: 1.1;
   --curve-scale: 3;
   --mask-size: 300%;
 }
 
-.pod-wrap.bearish .card {
+.pod-wrap.bearish .card-bg {
   background-image: linear-gradient(
     to right,
     var(--color-pink) -50%,
     color-mix(in srgb, var(--color-orange) 75%, transparent) 100%
   );
+}
+
+:deep(.badge) {
+  background: var(--color-main);
 }
 </style>

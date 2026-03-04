@@ -19,12 +19,48 @@
     </header>
     <main>
       <div class="cards-wrap flex justify-center">
-        <div class="cards flex gap-4">
-          <mood-card mood="bullish" />
-          <mood-card mood="mixed" />
-          <mood-card mood="mixed" />
-          <mood-card mood="mixed" alt />
-          <mood-card mood="bearish" />
+        <div class="cards flex gap-8 items-center">
+          <mood-card
+            v-for="vertical in enrichedVerticals"
+            :key="vertical.id"
+            :mood="vertical.mood"
+            :class="{ alt: vertical.isAlt }"
+          >
+            <span
+              class="badge self-start text-sm rounded-full py-1 px-3 capitalize"
+              :data-mood="vertical.mood"
+              :data-confidence="vertical.confidence"
+            >
+              {{ vertical.mood }} · {{ vertical.confidence }}%
+            </span>
+            <span class="tickers">
+              <span
+                v-for="ticker in vertical.topTickers.slice(0, 3)"
+                :key="ticker.ticker"
+              >
+                {{ ticker.ticker }}
+              </span>
+            </span>
+            <span class="title font-display text-4xl">{{
+              vertical.title
+            }}</span>
+
+            <span class="factors mt-20 flex flex-col gap-4">
+              <a
+                v-for="(article, i) in vertical.news.slice(
+                  0,
+                  vertical.newsCount
+                )"
+                :key="i"
+                :href="article.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="line-clamp-2 underline"
+              >
+                {{ article.title }}
+              </a>
+            </span>
+          </mood-card>
         </div>
       </div>
     </main>
@@ -38,6 +74,28 @@
 
 <script setup lang="ts">
 const { verticals, loading, error, refresh } = useMarketVerticals();
+
+const MOOD_ORDER = { bullish: 0, mixed: 1, bearish: 2 } as const;
+
+const sortedVerticals = computed(() =>
+  [...(verticals.value ?? [])].sort((a, b) => {
+    const moodDiff = MOOD_ORDER[a.mood] - MOOD_ORDER[b.mood];
+    if (moodDiff !== 0) return moodDiff;
+    return b.confidence - a.confidence;
+  })
+);
+
+const enrichedVerticals = computed(() => {
+  let mixedCount = 0;
+  return sortedVerticals.value.map((vertical, i) => {
+    let isAlt = false;
+    if (vertical.mood === 'mixed') {
+      isAlt = mixedCount >= 2;
+      mixedCount++;
+    }
+    return { ...vertical, isAlt, newsCount: i % 2 === 0 ? 3 : 5 };
+  });
+});
 
 // Manual refresh only - user refreshes once daily
 // No auto-refresh to minimize API costs
