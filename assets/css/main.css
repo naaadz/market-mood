@@ -7,12 +7,11 @@
   --color-dark: #15051d;
   --color-light: #ffffff;
 
-  --color-green: oklch(83.3% 0.182 160.8);
-  --color-blue: oklch(0.5928 0.1902 257.28);
-  --color-purple: oklch(0.6218 0.2042 279.29);
-  --color-pink: oklch(75.8% 0.239 328.2);
-  --color-orange: oklch(73.8% 0.156 30.9);
-  /* --color-orange: oklch(0.7186 0.1797 11.96); */
+  --color-green: #22eca3;
+  --color-blue: #227aec;
+  --color-purple: #7270fd;
+  --color-pink: #fd70fb;
+  --color-orange: #ff6c86;
 
   --font-mono: 'Ubuntu Mono', monospace;
   --font-display: 'Pixelify Sans', sans-serif;
@@ -23,6 +22,28 @@
 
 body {
   @apply bg-dark font-mono text-light;
+  position: relative;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #22eca3,
+    #227aec,
+    #7270fd,
+    #fd70fb,
+    #ff6c86
+  );
+  mask-image: url('/assets/images/globe.png');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
 }
 
 .button {

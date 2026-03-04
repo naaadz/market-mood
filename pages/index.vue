@@ -1,35 +1,44 @@
+<template>
+  <div class="flex flex-col gap-30 py-20 min-h-screen justify-center">
+    <header class="max-w-6xl w-full mx-auto flex justify-between">
+      <div class="logo flex flex-col gap-2">
+        <h1 class="font-display flex gap-2 text-5xl">
+          <span>Market</span><span class="font-bold">Mood</span>
+        </h1>
+        <span class="uppercase text-lg tracking-[.5rem] text-light/70"
+          >Sentiment Sensor</span
+        >
+      </div>
+      <div class="stats flex items-center gap-6">
+        <div class="flex flex-col text-right">
+          <span>Hello, Nadia</span>
+          <span>Last refresh: Mar 3, 12:45pm</span>
+        </div>
+        <button class="button secondary">Refresh</button>
+      </div>
+    </header>
+    <main>
+      <div class="cards-wrap flex justify-center">
+        <div class="cards flex gap-4">
+          <mood-card mood="bullish" />
+          <mood-card mood="mixed" />
+          <mood-card mood="mixed" />
+          <mood-card mood="mixed-2" />
+          <mood-card mood="bearish" />
+        </div>
+      </div>
+    </main>
+    <footer class="text-light/80 flex justify-center gap-2">
+      <span>MarketMood 2026</span>
+      <span>|</span>
+      <a class="underline" href="#">Contact our team</a>
+    </footer>
+  </div>
+</template>
+
 <script setup lang="ts">
-const { verticals, loading, error, refresh } = useMarketVerticals()
+const { verticals, loading, error, refresh } = useMarketVerticals();
 
 // Manual refresh only - user refreshes once daily
 // No auto-refresh to minimize API costs
 </script>
-
-<template>
-  <div class="min-h-screen bg-gray-50">
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <!-- Header -->
-      <div class="mb-8 flex items-center justify-between">
-        <div>
-          <h1 class="text-4xl font-bold text-gray-900">Market Mood</h1>
-          <p class="mt-2 text-gray-600">Real-time sentiment analysis across market sectors</p>
-        </div>
-        <button
-          @click="refresh()"
-          :disabled="loading"
-          class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
-        >
-          {{ loading ? 'Refreshing...' : 'Refresh All' }}
-        </button>
-      </div>
-
-      <!-- Error State -->
-      <div v-if="error" class="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-        <p class="text-red-800">{{ error.message }}</p>
-      </div>
-
-      <!-- Dashboard Grid -->
-      <DashboardGrid :verticals="verticals || []" :loading="loading" />
-    </div>
-  </div>
-</template>
