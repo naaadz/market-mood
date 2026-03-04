@@ -40,7 +40,7 @@ body::after {
     #ff6c86
   );
   mask-image: url('/assets/images/globe.png');
-  mask-size: 100%;
+  mask-size: cover;
   mask-repeat: no-repeat;
   mask-position: center;
   z-index: 0;

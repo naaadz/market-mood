@@ -33,12 +33,20 @@
             >
               {{ vertical.mood }} {{ vertical.confidence }}%
             </span>
-            <span class="tickers">
+            <span class="tickers flex gap-2">
               <span
                 v-for="ticker in vertical.topTickers.slice(0, 3)"
                 :key="ticker.ticker"
+                class="ticker-item flex gap-1"
               >
-                {{ ticker.ticker }}
+                {{ ticker.ticker
+                }}<span class="ticker-caret" :class="ticker.sentiment">{{
+                  ticker.sentiment === 'bearish'
+                    ? '▼'
+                    : ticker.sentiment === 'mixed'
+                      ? '—'
+                      : '▲'
+                }}</span>
               </span>
             </span>
             <span class="title font-display text-4xl">{{

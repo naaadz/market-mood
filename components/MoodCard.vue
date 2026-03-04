@@ -14,7 +14,7 @@
       >
         <path
           fill="none"
-          stroke="var(--color-stroke, var(--color-from))"
+          stroke="var(--color-stroke)"
           stroke-width="4"
           d="M1161.49,224.18c.03-19.99,0-44.07-.02-62.39-.41-14.21.52-30.86-8.59-37.4-7.06-5.08-16.48-4.4-24.54-2.41-17.97,4.44-34.38,16.41-52.96,6.61-15.79-8.33-27.16-20.57-39.08-33.41-7.78-8.37-17.28-12.92-28.59-9.16s-20.23,12.71-31.75,16.06c-60.53,17.62-57.51-56.53-85.7-87.44-56.1-61.5-93.22,91.56-148.46,73.92-21.37-6.82-28.13-27.35-36.3-45.56-25.83-57.55-62.56-6.81-77.4,26.98-3.9,8.88-8.35,17.78-12.81,25.78-18.54,34.66-49.58,22.9-78.12,9.46-20.72-9.75-29.51-1.23-43.84,13.8-11.55,12.12-21.79,20.56-39.28,20.02-21.21-.66-37.21-7.69-53.84,9.3-11.9,12.15-17.18,29.35-28.95,41.64-10.94,11.42-26.77,29.26-44.1,26.36-19.48-3.27-32.14-26.24-40.13-41.97-8.36-16.45-20.39-39.57-42.96-33.85-29.76,7.55-39.51,62.07-53.84,84.84-11.43,18.15-32.47,20.27-50.41,15.36-13.87-4.03-26.59-18.05-41.11-17.61-14.24-.12-21.88,15.58-32.69,25.64-2.53,2.46-5.19,4.72-8,6.65-20.41,14.69-37.69.82-49.32,7.34l-.06.04C-.49,269.34.44,285.98.03,300.19"
         />
@@ -42,6 +42,28 @@ defineProps<{
 .pod-wrap {
   position: relative;
   width: var(--card-w);
+  border-radius: 16px;
+  transition: transform 0.35s ease;
+}
+
+.pod-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: 32px;
+  background: linear-gradient(to right, var(--color-from), var(--color-to));
+  filter: blur(20px);
+  opacity: 0.3;
+  z-index: -1;
+  transition: opacity 0.35s ease;
+}
+
+.pod-wrap:hover {
+  transform: translateY(-3px);
+}
+
+.pod-wrap:hover::before {
+  opacity: 0.55;
 }
 
 .pod-curve {
@@ -105,8 +127,6 @@ defineProps<{
 
 /* ================================
    Bullish — green → blue
-   Left: --color-green at full opacity
-   Right: --color-blue at 75% opacity, stop extends past card edge
    ================================ */
 .pod-wrap.bullish {
   --color-main: var(--color-green);
@@ -130,9 +150,6 @@ defineProps<{
 
 /* ================================
    Mixed — blue → purple → pink
-   Left: --color-blue at full opacity
-   Mid: --color-purple at 90% opacity
-   Right: --color-pink at 80% opacity, stop extends past card edge
    ================================ */
 .pod-wrap.mixed {
   --color-main: var(--color-blue-brighter);
@@ -159,6 +176,8 @@ defineProps<{
 
 /* alt variant — pink stroke on the curve */
 .pod-wrap.mixed.alt {
+  --color-from: var(--color-purple);
+  --color-to: var(--color-pink);
   --color-main: var(--color-pink);
   --color-stroke: var(--color-pink);
   --curve-fill-color: var(--color-pink);
@@ -166,8 +185,6 @@ defineProps<{
 
 /* ================================
    Bearish — pink → orange
-   Left: --color-pink at full opacity
-   Right: --color-orange at 80% opacity, stop extends past card edge
    ================================ */
 .pod-wrap.bearish {
   --color-main: var(--color-orange);
