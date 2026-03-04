@@ -31,7 +31,7 @@
               :data-mood="vertical.mood"
               :data-confidence="vertical.confidence"
             >
-              {{ vertical.mood }} · {{ vertical.confidence }}%
+              {{ vertical.mood }} {{ vertical.confidence }}%
             </span>
             <span class="tickers">
               <span
