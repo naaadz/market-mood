@@ -23,7 +23,7 @@
           <mood-card mood="bullish" />
           <mood-card mood="mixed" />
           <mood-card mood="mixed" />
-          <mood-card mood="mixed-2" />
+          <mood-card mood="mixed" alt />
           <mood-card mood="bearish" />
         </div>
       </div>
@@ -42,3 +42,14 @@ const { verticals, loading, error, refresh } = useMarketVerticals();
 // Manual refresh only - user refreshes once daily
 // No auto-refresh to minimize API costs
 </script>
+
+<style scoped>
+/* Distribute mixed cards across the blue→purple gradient automatically.
+   Each successive .mixed sibling overrides --mix-pos to a later position. */
+.pod-wrap.mixed ~ .pod-wrap.mixed {
+  --mix-pos: 50%;
+}
+.pod-wrap.mixed ~ .pod-wrap.mixed ~ .pod-wrap.mixed {
+  --mix-pos: 100%;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="pod-wrap" :class="mood">
+  <div class="pod-wrap" :class="[mood, { alt }]">
     <!-- Curve overlay -->
     <div class="pod-curve" aria-hidden="true">
       <div class="pod-curve-fill"></div>
@@ -26,7 +26,8 @@
 
 <script setup lang="ts">
 defineProps<{
-  mood: 'bullish' | 'mixed' | 'mixed-2' | 'bearish';
+  mood: 'bullish' | 'mixed' | 'bearish';
+  alt?: boolean;
 }>();
 </script>
 
@@ -144,30 +145,17 @@ defineProps<{
   background-image: linear-gradient(
     to right,
     var(--color-blue) 0%,
-    var(--color-purple) 100%
-  );
-}
-
-/* ================================
-   Mixed-2 — purple → pink
-   ================================ */
-.pod-wrap.mixed-2 {
-  --color-from: var(--color-purple);
-  --color-to: var(--color-pink);
-  --color-stroke: var(--color-pink);
-  --curve-fill-color: var(--color-pink);
-  --curve-x: -0.44;
-  --curve-y: 0.6;
-  --curve-scale: 3;
-  --mask-size: 300%;
-}
-
-.pod-wrap.mixed-2 .card {
-  background-image: linear-gradient(
-    to right,
-    var(--color-purple) 37%,
+    var(--color-purple) 50%,
     var(--color-pink) 120%
   );
+  background-size: 300% 100%;
+  background-position: var(--mix-pos, 0%) center;
+}
+
+/* alt variant — pink stroke on the curve */
+.pod-wrap.mixed.alt {
+  --color-stroke: var(--color-pink);
+  --curve-fill-color: var(--color-pink);
 }
 
 /* ================================
