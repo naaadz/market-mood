@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col gap-30 py-20 min-h-screen justify-center">
-    <header class="max-w-6xl w-full mx-auto flex justify-between">
+    <header
+      class="max-w-6xl w-full mx-auto flex flex-col sm:flex-row justify-between"
+    >
       <div class="logo flex flex-col gap-2">
         <h1 class="font-display flex gap-2 text-5xl">
           <span>Market</span><span class="font-bold">Mood</span>
@@ -9,8 +11,8 @@
           >Sentiment Sensor</span
         >
       </div>
-      <div class="stats flex items-center gap-6">
-        <div class="flex flex-col text-right">
+      <div class="stats flex flex-col sm:flex-row items-center gap-6">
+        <div class="flex-col text-right hidden sm:flex">
           <span>Hello, Nadia</span>
           <span>Last refresh: Mar 3, 12:45pm</span>
         </div>
@@ -117,5 +119,46 @@ const enrichedVerticals = computed(() => {
 }
 .pod-wrap.mixed ~ .pod-wrap.mixed ~ .pod-wrap.mixed {
   --mix-pos: 100%;
+}
+
+/* ── Mobile swipe slider ── */
+@media (max-width: 768px) {
+  /* .cards-wrap becomes the scroll container so .cards has no overflow
+     constraints — the card glows (::before, inset:-10px, blur:20px) can
+     then overflow .cards freely and only need to fit inside .cards-wrap's
+     vertical padding, avoiding any forced clipping. */
+  .cards-wrap {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Vertical padding > glow visual spread (inset:10px + blur:20px ≈ 50px) */
+    padding: 50px 1rem;
+    scroll-padding-left: 1rem;
+  }
+
+  .cards-wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cards {
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  /* Targets MoodCard's root .pod-wrap — Vue 3 allows parent scoped CSS
+     to style a child component's root element without :deep() */
+  .pod-wrap {
+    --card-w: 85vw;
+    width: 85vw;
+    min-width: 85vw;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
 }
 </style>
