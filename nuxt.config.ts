@@ -15,5 +15,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     anthropicApiKey: '',
     braveSearchApiKey: '',
+    claudeModel: 'claude-sonnet-4-6',
   },
 });

@@ -60,7 +60,7 @@ Search for recent news and social media discussions from the past 48 hours. Iden
   // Tool calling loop
   while (true) {
     const response = await client.messages.create({
-      model: MODEL,
+      model: getModel(),
       max_tokens: 4096,
       system: systemPrompt,
       tools: [SEARCH_TOOL_DEFINITION],
@@ -108,7 +108,8 @@ Search for recent news and social media discussions from the past 48 hours. Iden
 
     // No more tool calls - extract final response
     const textBlock = response.content.find(
-      (block: any) => block.type === 'text'
+      (block): block is Extract<typeof block, { type: 'text' }> =>
+        block.type === 'text'
     );
     if (textBlock) {
       const analysis = parseClaudeResponse(textBlock.text);
@@ -118,7 +119,14 @@ Search for recent news and social media discussions from the past 48 hours. Iden
         title: verticalConfig.title,
         description: verticalConfig.description,
         lastUpdated: new Date().toISOString(),
-        ...analysis,
+        mood: analysis.mood ?? 'mixed',
+        confidence: analysis.confidence ?? 0,
+        summary: analysis.summary ?? '',
+        overallAnalysis: analysis.overallAnalysis ?? '',
+        keyFactors: analysis.keyFactors ?? [],
+        topTickers: analysis.topTickers ?? [],
+        news: analysis.news ?? [],
+        socialBuzz: analysis.socialBuzz,
       };
     }
 
