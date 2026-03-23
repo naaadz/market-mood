@@ -17,9 +17,23 @@
       <div class="stats flex flex-col sm:flex-row items-center gap-6">
         <div class="flex-col text-right hidden lg:flex">
           <span>Hello, Nadia</span>
-          <span>Last refresh: Mar 3, 12:45pm</span>
+          <a
+            v-if="lastRefreshed"
+            href="/api/report"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View report"
+            class="underline"
+            >Last refresh: {{ lastRefreshed }}</a
+          >
         </div>
-        <button class="button secondary">Refresh</button>
+        <button
+          class="button secondary"
+          :disabled="loading"
+          @click="handleRefresh"
+        >
+          Refresh
+        </button>
       </div>
     </header>
     <main>
@@ -90,6 +104,14 @@
 <script setup lang="ts">
 const { verticals, loading, error, refresh } = useMarketVerticals();
 
+const handleRefresh = () => {
+  if (!import.meta.dev) {
+    alert('Demo only in Production.');
+    return;
+  }
+  refresh();
+};
+
 const breakpoints = useBreakpoints({ md: 1380 });
 const isMobile = breakpoints.smaller('md');
 
@@ -117,6 +139,17 @@ const enrichedVerticals = computed(() => {
       newsCount: isMobile.value ? 3 : i % 2 === 0 ? 3 : 5,
     };
   });
+});
+
+const lastRefreshed = computed(() => {
+  const ts = verticals.value?.[0]?.lastUpdated;
+  if (!ts) return null;
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  }).format(new Date(ts));
 });
 
 // Manual refresh only - user refreshes once daily

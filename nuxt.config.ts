@@ -6,6 +6,12 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   ssr: false,
 
+  app: {
+    head: {
+      title: 'MarketMood - Sentiment Sensor',
+    },
+  },
+
   runtimeConfig: {
     anthropicApiKey: '',
     braveSearchApiKey: '',

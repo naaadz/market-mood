@@ -3,7 +3,8 @@
 .data
 .nuxt
 .nitro
-.cache
+.cache/*
+!.cache/market-data.json
 dist
 
 # Node dependencies
