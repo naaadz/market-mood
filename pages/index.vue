@@ -77,9 +77,11 @@
         </div>
       </div>
     </main>
-    <footer class="text-light/80 flex justify-center gap-2">
+    <footer
+      class="text-light/50 flex flex-col sm:flex-row justify-center items-center gap-2"
+    >
       <span>MarketMood 2026</span>
-      <span>|</span>
+      <span class="hidden sm:block">|</span>
       <a class="underline" href="#">Contact our team</a>
     </footer>
   </div>

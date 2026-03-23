@@ -59,12 +59,14 @@ defineProps<{
   transition: opacity 0.35s ease;
 }
 
-.pod-wrap:hover {
-  transform: translateY(-3px);
-}
+@media (min-width: 1381px) {
+  .pod-wrap:hover {
+    transform: translateY(-3px);
+  }
 
-.pod-wrap:hover::before {
-  opacity: 0.55;
+  .pod-wrap:hover::before {
+    opacity: 0.55;
+  }
 }
 
 .pod-curve {
