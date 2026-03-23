@@ -45,27 +45,35 @@ defineProps<{
   max-width: 250px;
   border-radius: 16px;
   transition: transform 0.35s ease;
-}
 
-.pod-wrap::before {
-  content: '';
-  position: absolute;
-  inset: -10px;
-  border-radius: 32px;
-  background: linear-gradient(to right, var(--color-from), var(--color-to));
-  filter: blur(20px);
-  opacity: 0.3;
-  z-index: -1;
-  transition: opacity 0.35s ease;
-}
-
-@media (min-width: 1381px) {
-  .pod-wrap:hover {
-    transform: translateY(-3px);
+  &:before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 32px;
+    background: linear-gradient(to right, var(--color-from), var(--color-to));
+    filter: blur(20px);
+    opacity: 0.3;
+    z-index: -1;
+    transition: opacity 0.35s ease;
   }
 
-  .pod-wrap:hover::before {
-    opacity: 0.55;
+  @media (min-width: 1381px) {
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      background: var(--color-dark);
+      opacity: 0;
+      z-index: 3;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
   }
 }
 
@@ -146,8 +154,10 @@ defineProps<{
   background-image: linear-gradient(
     to right,
     var(--color-green) 0%,
-    color-mix(in srgb, var(--color-blue) 75%, transparent) 120%
+    var(--color-blue) 100%
   );
+  background-size: 300% 100%;
+  background-position: var(--mood-bg-pos, 0%) center;
 }
 
 /* ================================
@@ -173,7 +183,7 @@ defineProps<{
     var(--color-pink) 120%
   );
   background-size: 300% 100%;
-  background-position: var(--mix-pos, 0%) center;
+  background-position: var(--mood-bg-pos, 0%) center;
 }
 
 /* alt variant — pink stroke on the curve */
@@ -203,9 +213,11 @@ defineProps<{
 .pod-wrap.bearish .card-bg {
   background-image: linear-gradient(
     to right,
-    var(--color-pink) -50%,
-    color-mix(in srgb, var(--color-orange) 75%, transparent) 100%
+    var(--color-pink) 0%,
+    var(--color-orange) 100%
   );
+  background-size: 300% 100%;
+  background-position: var(--mood-bg-pos, 0%) center;
 }
 
 :deep(.title) {

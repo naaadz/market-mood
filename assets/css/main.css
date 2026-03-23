@@ -55,37 +55,3 @@ body::after {
     @apply opacity-50 cursor-not-allowed;
   }
 }
-
-@media (min-width: 1381px) {
-  .pod-wrap::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 16px;
-    background: var(--color-dark);
-    opacity: 0;
-    z-index: 3;
-    pointer-events: none;
-    transition: opacity 0.35s ease;
-  }
-
-  .cards:has(.pod-wrap:hover) {
-    .pod-wrap {
-      &::after {
-        opacity: 0.7;
-      }
-      &::before {
-        opacity: 0;
-      }
-
-      &:hover {
-        &::after {
-          opacity: 0;
-        }
-        &::before {
-          opacity: 0.55;
-        }
-      }
-    }
-  }
-}

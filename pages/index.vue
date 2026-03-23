@@ -53,6 +53,7 @@
             :key="vertical.id"
             :mood="vertical.mood"
             :class="{ alt: vertical.isAlt }"
+            :style="{ '--mood-bg-pos': vertical.bgPos }"
           >
             <span
               class="badge self-start text-sm rounded-full py-1 px-3 capitalize"
@@ -135,16 +136,23 @@ const sortedVerticals = computed(() =>
 );
 
 const enrichedVerticals = computed(() => {
-  let mixedCount = 0;
+  const moodCounts: Record<string, number> = {};
+  const moodIndex: Record<string, number> = {};
+  for (const v of sortedVerticals.value) {
+    moodCounts[v.mood] = (moodCounts[v.mood] ?? 0) + 1;
+  }
+
   return sortedVerticals.value.map((vertical, i) => {
-    let isAlt = false;
-    if (vertical.mood === 'mixed') {
-      isAlt = mixedCount >= 2;
-      mixedCount++;
-    }
+    const idx = moodIndex[vertical.mood] ?? 0;
+    moodIndex[vertical.mood] = idx + 1;
+    const total = moodCounts[vertical.mood];
+    const bgPos =
+      total === 1 ? '0%' : `${Math.round((idx / (total - 1)) * 100)}%`;
+
     return {
       ...vertical,
-      isAlt,
+      isAlt: vertical.mood === 'mixed' && idx >= total - (total >= 4 ? 2 : 1),
+      bgPos,
       newsCount: isMobile.value ? 3 : i % 2 === 0 ? 3 : 5,
     };
   });
@@ -166,15 +174,6 @@ const lastRefreshed = computed(() => {
 </script>
 
 <style scoped>
-/* Distribute mixed cards across the blue→purple gradient automatically.
-   Each successive .mixed sibling overrides --mix-pos to a later position. */
-.pod-wrap.mixed ~ .pod-wrap.mixed {
-  --mix-pos: 50%;
-}
-.pod-wrap.mixed ~ .pod-wrap.mixed ~ .pod-wrap.mixed {
-  --mix-pos: 100%;
-}
-
 /* ── Mobile swipe slider ── */
 @media (max-width: 1380px) {
   /* .cards-wrap becomes the scroll container so .cards has no overflow
@@ -213,6 +212,29 @@ const lastRefreshed = computed(() => {
     min-width: 250px;
     flex-shrink: 0;
     scroll-snap-align: start;
+  }
+}
+
+@media (min-width: 1381px) {
+  .cards:has(.pod-wrap:hover) {
+    .pod-wrap {
+      &::after {
+        opacity: 0.7;
+      }
+
+      &::before {
+        opacity: 0;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 0.4;
+        }
+      }
+    }
   }
 }
 </style>
