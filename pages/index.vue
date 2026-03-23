@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col gap-0 lg:gap-30 py-10 lg:py-20 min-h-screen justify-center"
+    class="flex flex-col gap-10 lg:gap-30 py-10 lg:py-20 min-h-screen justify-center"
   >
     <header
       class="max-w-6xl w-full mx-auto px-10 flex flex-col lg:flex-row justify-between gap-6 items-center"
@@ -37,7 +37,16 @@
       </div>
     </header>
     <main>
-      <div class="cards-wrap flex justify-center">
+      <div
+        v-if="error"
+        class="flex flex-col justify-center items-center gap-4 p-14 text-center border-light border-2 w-[90%] sm:w-1/2 rounded-3xl mx-auto"
+      >
+        <p class="text-xl">Failed to load market data</p>
+        <p class="text-sm">
+          {{ error.message || 'An unexpected error occurred.' }}
+        </p>
+      </div>
+      <div v-else class="cards-wrap flex justify-center">
         <div class="cards flex gap-8 items-center">
           <mood-card
             v-for="vertical in enrichedVerticals"

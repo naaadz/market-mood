@@ -4,109 +4,132 @@
       "id": "ai-stocks",
       "title": "AI",
       "description": "AI/ML companies and semiconductor manufacturers",
-      "lastUpdated": "2026-03-23T01:17:06.884Z",
-      "mood": "bullish",
-      "confidence": 82,
-      "summary": "AI and semiconductor stocks are showing strong bullish sentiment driven by massive supply deals, persistent chip shortages, and record orders. The Nvidia-AWS 1M chip deal and memory chip shortages are fueling optimism despite some short-term volatility concerns.",
-      "overallAnalysis": "The AI semiconductor sector is experiencing robust bullish momentum in late March 2026, underpinned by several powerful catalysts. The most significant recent development is Nvidia's massive deal with Amazon Web Services to supply 1 million GPUs through 2027, signaling sustained enterprise demand for AI infrastructure. Memory chip manufacturers, particularly Micron, are benefiting from an acute shortage that analysts predict will last through 2027, with prices rising 20% and AI consuming 70% of DRAM production. TSMC, ASML, and Broadcom continue to see strong order momentum, with ASML reporting record bookings and raising 2026 guidance. While Reddit sentiment shows some caution about valuations and potential bubble concerns, institutional investors and analysts remain overwhelmingly positive, with price target increases across the board. The broader narrative suggests we're in a sustained AI supercycle rather than a short-term bubble, though semiconductor equipment and memory stocks may offer better value propositions than premium GPU makers at current valuations.",
+      "lastUpdated": "2026-03-23T02:21:33.831Z",
+      "mood": "mixed",
+      "confidence": 72,
+      "summary": "The AI and semiconductor sector shows mixed sentiment with strong underlying demand fundamentals but tempered by profit-taking and valuation concerns. While major players like NVIDIA, TSMC, and Broadcom continue to benefit from massive AI capex spending ($700B+ in 2026), recent market corrections and concerns about the sustainability of growth rates are creating buying opportunities rather than sustained rallies.",
+      "overallAnalysis": "Market sentiment on AI stocks is currently polarized. On the bullish side, the sector is experiencing unprecedented demand with hyperscalers (Microsoft, Meta, Google, Amazon) collectively planning to spend over $720 billion on AI infrastructure in 2026. TSMC's earnings beat and guidance raises confidence across the supply chain, while Broadcom is capitalizing on the custom AI chip supercycle with $10+ billion in orders. Memory chip makers (Micron, SK Hynix, Samsung) are experiencing exceptional growth due to AI server requirements. However, bearish sentiment is emerging from valuation concerns, with Palantir trading at 240x trailing earnings and broader concerns about the long-term sustainability of growth rates. Analyst commentary suggests that while AI demand is legitimate and growing, the market may have become \"too upbeat\" on long-term investment growth. Recent price corrections in semiconductor stocks despite positive fundamentals indicate profit-taking and a shift from \"AI at any price\" to more selective investment. Reddit discussions show sophistication about supply chain dynamics, with investors recognizing that NVDA dominance is being challenged by hyperscaler custom ASICs (via Broadcom) and that TSM remains the indispensable link in AI computing. The consensus among retail and institutional investors is that the AI trade continues, but the frenzied phase is maturing into more calculated, selective buying.",
       "keyFactors": [
-        "Nvidia-AWS deal for 1 million chips through 2027 confirms sustained hyperscaler demand",
-        "Global memory chip shortage expected through 2027 driving 20%+ price increases and benefiting MU, Samsung",
-        "TSMC, ASML reporting record orders with full capacity allocation through 2026-2027",
-        "Market rotation toward memory and semiconductor equipment stocks as 'picks and shovels' plays",
-        "Geopolitical concerns (Taiwan, China export restrictions) creating some volatility but not derailing growth trajectory"
+        "TSMC earnings beat with 35% Q4 profit increase and raised 2026 capex guidance signals healthy AI demand pipeline",
+        "Hyperscalers spending $700-720 billion on AI infrastructure in 2026, with shift toward custom ASICs via Broadcom reducing GPU dependency",
+        "Memory chip shortage and price increases benefiting Micron (370% yearly gain), SK Hynix, Samsung as AI servers require massive DRAM/HBM",
+        "Valuation concerns weighing on sentiment - Palantir at 240x earnings, broader sector at elevated multiples despite strong growth",
+        "Emerging competition from custom chips reducing reliance on Nvidia, creating opportunities in Broadcom but risks for GPU-only strategies",
+        "Supply chain constraints expected to persist through 2027, supporting pricing power for chipmakers",
+        "Profit-taking and market correction despite fundamental strength creating buying opportunities for long-term investors"
       ],
       "topTickers": [
         {
           "ticker": "NVDA",
-          "sentiment": "bullish",
-          "confidence": 85,
-          "mentions": 847
-        },
-        {
-          "ticker": "MU",
-          "sentiment": "bullish",
-          "confidence": 88,
-          "mentions": 412
+          "sentiment": "mixed",
+          "confidence": 68,
+          "mentions": 245,
+          "analysis": "Dominant leader facing intensity of custom AI chip competition. Trading at attractive 21x forward P/E but momentum slowing. Analysts project 85% upside but acknowledge hyperscaler custom ASICs are a long-term threat."
         },
         {
           "ticker": "TSMC",
           "sentiment": "bullish",
-          "confidence": 79,
-          "mentions": 389
-        },
-        {
-          "ticker": "AMD",
-          "sentiment": "mixed",
-          "confidence": 68,
-          "mentions": 356
+          "confidence": 82,
+          "mentions": 178,
+          "analysis": "Strong bullish momentum from Q4 earnings beat (35% profit growth) and 2026 capex raise. Up 43% in 6 months. Viewed as indispensable foundry for all AI chip makers. Projected 34% earnings growth in 2026."
         },
         {
           "ticker": "AVGO",
           "sentiment": "bullish",
-          "confidence": 81,
-          "mentions": 298
+          "confidence": 78,
+          "mentions": 142,
+          "analysis": "Broadcom benefiting significantly from custom AI chip boom. Secured $10-11 billion in orders from hyperscalers and Anthropic. Fifth major hyperscaler customer added recently. Strong positioning in Ethernet networking for AI data centers."
+        },
+        {
+          "ticker": "MU",
+          "sentiment": "bullish",
+          "confidence": 75,
+          "mentions": 89,
+          "analysis": "Micron up 370% over past year, continuing to gain market share in DRAM and NAND memory critical for AI servers. Benefiting from ongoing memory supply shortage and price increases. Up 240% in past year."
+        },
+        {
+          "ticker": "AMD",
+          "sentiment": "mixed",
+          "confidence": 65,
+          "mentions": 134,
+          "analysis": "Mixed sentiment as momentum continues to rotate out of GPU names into specialized chips. AMD up 2% on TSMC confidence but analyst upgraded Broadcom as top pick instead. Faces ASIC competition from Broadcom partnership wins."
+        },
+        {
+          "ticker": "PLTR",
+          "sentiment": "mixed",
+          "confidence": 60,
+          "mentions": 98,
+          "analysis": "Extremely high valuation (240x earnings) creating mixed signals. Pentagon formally designated Maven AI as military program, supporting bullish case. Up 1,030% since Jan 2024 but down 15% YTD. Facing competition from Azure and Amazon Bedrock."
         },
         {
           "ticker": "ASML",
           "sentiment": "bullish",
-          "confidence": 84,
-          "mentions": 267
-        },
-        {
-          "ticker": "INTC",
-          "sentiment": "mixed",
-          "confidence": 62,
-          "mentions": 203
+          "confidence": 70,
+          "mentions": 76,
+          "analysis": "Monopoly on extreme ultraviolet lithography equipment critical for advanced chip manufacturing. Benefits from entire AI chip supply chain expansion. Mentioned as hidden gem by Wall Street analysts."
         }
       ],
       "news": [
         {
-          "title": "Nvidia to sell 1 million chips to Amazon by end of 2027 in cloud deal",
-          "source": "Reuters",
-          "url": "https://www.reuters.com/business/retail-consumer/nvidia-sell-1-million-chips-amazon-by-end-2027-cloud-deal-2026-03-19/",
-          "publishedAt": "2026-03-19",
-          "snippet": "Nvidia will sell 1 million of its graphics processing unit chips, along with a host of the AI giant's other offerings, to Amazon.com's cloud computing unit by 2027. The deal also includes putting Nvidia's Connect X and Spectrum X networking gear in AWS data centers."
-        },
-        {
-          "title": "Micron rides memory price spike into earnings with stock up 62%, drubbing its tech peers",
+          "title": "Chip stocks Nvidia AMD pop after TSMC's earnings beat lifts confidence",
           "source": "CNBC",
-          "url": "https://www.cnbc.com/2026/03/18/micron-mu-memory-price-spike-earnings.html",
-          "publishedAt": "2026-03-18",
-          "snippet": "Micron saw its stock triple in 2025, and it's up nearly 62% so far in 2026, as heavy demand for memory-rich Nvidia artificial intelligence chips leads to shortages. The company is benefiting from the ongoing memory chip shortage expected to last through 2027."
+          "url": "https://www.cnbc.com/2026/01/15/chip-stocks-nvidia-amd-pop-after-tsmcs-earnings-beat-lifts-confidence.html",
+          "publishedAt": "2026-01-16",
+          "snippet": "TSMC, the biggest contract chipmaker, reported a 35% increase in fourth-quarter profit, beating estimates, and said it expects to boost capital spending in 2026, signaling confidence in the AI buildout. Nvidia closed up more than 2% on Thursday, with smaller rival AMD closing up almost 2%."
         },
         {
-          "title": "Memory Chip Shortage 2026: Prices Up 20%, AI Eats 70% of DRAM",
-          "source": "Tech Insider",
-          "url": "https://tech-insider.org/memory-chip-shortage-2026-ai-consumer-electronics/",
-          "publishedAt": "2026-03-19",
-          "snippet": "AI demand is triggering a historic memory-chip shortage with prices up 20% and AI consuming 70% of DRAM production. The shortage is expected to continue through 2027, creating supply constraints for consumer electronics while benefiting memory chip manufacturers."
+          "title": "Big Tech Is Spending $720 Billion on AI in 2026, and This One Stock Gets Paid on Every Dollar",
+          "source": "The Motley Fool",
+          "url": "https://www.fool.com/investing/2026/03/17/big-tech-is-spending-720-billion-on-ai-in-2026-and/",
+          "publishedAt": "2026-03-17",
+          "snippet": "Hyperscalers keep doubling down on their AI data center buildouts, TSMC is a key manufacturer of the processor chips those facilities need. When companies like Nvidia, AMD, and Broadcom publish strong results, Taiwan Semi is in the background, profiting from all of their successes."
         },
         {
-          "title": "ASML lifts 2026 outlook on record AI chip orders, plans 1,700 management job cuts",
-          "source": "The Globe and Mail",
-          "url": "https://www.theglobeandmail.com/investing/article-asml-fourth-quarter-results-2026-outlook-ai-chip-orders-job-cuts/",
-          "publishedAt": "2026-01-28",
-          "snippet": "ASML reported record fourth-quarter orders and raised its 2026 outlook, driven by insatiable demand for advanced lithography systems that make cutting-edge AI chips possible. The company also announced a 12 billion euro share buyback through 2028."
+          "title": "Memory chip giants spark global semiconductor rally as shortages stoke price hikes",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/01/06/semiconductor-stocks-rally-led-by-asml-tsmc-samsung.html",
+          "publishedAt": "2026-01-06",
+          "snippet": "Memory giants Micron, SK Hynix and Samsung have led a rally in semiconductor stocks this year. Memory prices surged in 2025 and are likely to increase further in 2026 as demand for these chips which are crucial for AI continues to rise."
         },
         {
-          "title": "3 semiconductor stocks to play the AI supercycle, according to analysts",
-          "source": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/news/3-semiconductor-stocks-to-play-the-ai-supercycle-according-to-analysts-203840729.html",
-          "publishedAt": "2026-01-07",
-          "snippet": "Companies like Micron, SK Hynix and Samsung are becoming increasingly important as memory becomes the next frontier in AI. Micron stock is up roughly 240% over the past year as the company gains market share in DRAM and NAND memory amid an ongoing supply shortage."
+          "title": "Hot Picks: AI demand and supply lift semiconductor stocks",
+          "source": "BNN Bloomberg",
+          "url": "https://www.bnnbloomberg.ca/investing/hot-picks/2026/03/17/hot-picks-ai-demand-and-supply-lift-semiconductor-stocks/",
+          "publishedAt": "2026-03-17",
+          "snippet": "Semiconductor demand remains strong, with supply shortages expected to persist through 2027. AI-related spending continues to rise as major technology companies expand infrastructure investment, benefiting chipmakers across the supply chain."
+        },
+        {
+          "title": "You'll Never Believe What Broadcom's CEO Just Said About AI Demand",
+          "source": "The Motley Fool",
+          "url": "https://www.fool.com/investing/2026/03/14/youll-never-believe-what-broadcoms-ceo-just-said/",
+          "publishedAt": "2026-03-14",
+          "snippet": "Broadcom has partnered directly with AI hyperscalers to design a chip that fits their needs, which cuts down on costs for the end user. Management disclosed a multibillion-dollar order from Anthropic and expects acceleration in XPU demand into late 2026."
         }
       ],
       "socialBuzz": {
         "platform": "reddit",
-        "mentions": 1847,
+        "mentions": 487,
         "sentiment": "mixed",
         "topPosts": [
-          "r/stocks discussion on Big Tech Capex accelerating +44% YoY to ~$610B in 2026, with debate over best AI semiconductor plays beyond Nvidia",
-          "r/stocks comparing NVDA vs AMD for 2026 value - sentiment leans toward AMD having more upside room despite NVDA's dominance",
-          "r/wallstreetbets discussing TSMC as undervalued with 30% revenue growth target and $56B capex in 2026",
-          "Multiple posts expressing concern about AI bubble risks but acknowledging strong fundamentals for major players",
-          "Discussion of memory chip shortage benefiting MU, with analysts raising price targets to $450-$650 range"
+          "I tracked 48 stocks that power AI data centers for 3 months. Everyone's buying NVDA but the trade is splitting apart - AMD, SMCI, INTC have rotated into Lagging while TSM, equipment names are in Weakening (r/wallstreetbets)",
+          "NVDA completely dominates the AI training market with their GPUs and has basically no real competition right now. TSM manufactures chips for both NVDA and AMD, so they benefit directly from AI demand (r/ValueInvesting)",
+          "Chip stocks jump as Nvidia supplier TSMC dismisses bubble fears: 'AI is real' (r/NVDA_Stock discussion)",
+          "nvda, tsm are the ones with the least downside risk. amd, avgo has high price upside but sees greater price volatility (r/stocks discussion on capex wave)",
+          "Why NVDA + AVGO combo might be the smart play - not competition but their abilities to lap up the AI market (r/NVDA_Stock investment strategy discussion)"
+        ],
+        "platforms": [
+          {
+            "name": "Reddit",
+            "mentions": 487,
+            "sentiment": "mixed",
+            "tone": "Sophisticated, strategy-focused, recognizing supply chain complexity and ASIC competition"
+          },
+          {
+            "name": "Stocktwits",
+            "mentions": 156,
+            "sentiment": "bullish",
+            "tone": "Community showing bullish tilt on TSMC and Broadcom despite Nvidia slight caution"
+          }
         ]
       }
     },
@@ -114,114 +137,110 @@
       "id": "crypto",
       "title": "Crypto",
       "description": "Cryptocurrency and blockchain sector",
-      "lastUpdated": "2026-03-23T01:18:42.989Z",
-      "mood": "bearish",
-      "confidence": 78,
-      "summary": "The cryptocurrency market is experiencing significant bearish pressure with Bitcoin trading around $68,000-$70,000, down from its all-time high of $126,210 in October 2025. The Crypto Fear & Greed Index shows 'Extreme Fear' at 10, while geopolitical tensions involving Iran and Trump's tariff policies have triggered market volatility with over $515 million in liquidations.",
-      "overallAnalysis": "The cryptocurrency and blockchain sector is currently facing substantial headwinds that have created a distinctly bearish market environment. Bitcoin has declined approximately 46% from its October 2025 all-time high and is consolidating in the $60,000-$70,000 range. The market sentiment has shifted to 'Extreme Fear' (index at 10 out of 100), the lowest readings seen in recent months. Multiple factors are contributing to this pessimistic outlook: geopolitical tensions with Iran causing Bitcoin to drop from $65,500 to $63,000 in under an hour, Trump's 15% tariff hikes creating uncertainty across all risk assets, and significant leverage liquidations exceeding $515 million in 24 hours. Bitcoin-related stocks like MSTR, MARA, and RIOT have all experienced substantial declines, with mining stocks particularly hurt by rising energy costs and reduced mining returns post-halving. Despite some institutional adoption continuing (MicroStrategy purchasing 22,337 BTC for $1.57 billion recently), retail and institutional investors remain defensive, with options markets showing extreme fear premiums. The market is caught between regulatory uncertainty, macro instability, and technical weakness, with most analysts expecting continued volatility and potential further downside before any sustained recovery.",
+      "lastUpdated": "2026-03-23T02:22:13.292Z",
+      "mood": "mixed",
+      "confidence": 65,
+      "summary": "The cryptocurrency market is experiencing significant volatility driven by geopolitical tensions (Iran-US conflict affecting oil markets) and regulatory developments. While longer-term sentiment remains optimistic due to the CLARITY Act advancement and pro-crypto regulatory environment, recent macro shocks have created short-term bearish pressure on Bitcoin, Ethereum, and altcoins.",
+      "overallAnalysis": "The cryptocurrency market is currently navigating conflicting signals that produce a mixed sentiment outlook. On the positive side, regulatory clarity is improving with the CLARITY Act advancing through Senate-White House negotiations, which has lifted sentiment for tokens like XRP, Solana, and Ethereum in recent days. The crypto industry has strong backing from the Trump administration, and institutional adoption continues to grow through spot Bitcoin ETFs. However, the market is currently experiencing acute pressure from geopolitical tensions in the Middle East, specifically Iran's threatened closure of the Strait of Hormuz, which has triggered oil market shocks that cascade into crypto markets. Bitcoin recently fell 2.58% to $68,820 while Ethereum dropped 3.36% to $2,082 as investors fled risk assets. Bitcoin mining stocks (MARA, RIOT) have declined 4-6% as rising energy costs from potential oil disruptions threaten mining profitability. The crypto market appears sensitive to macroeconomic shocks and is currently trading below key technical levels (200-day moving averages), suggesting medium-term bearish trends despite some short-term bullish signals from regulatory progress.",
       "keyFactors": [
-        "Extreme Fear sentiment with Fear & Greed Index at 10/100, indicating maximum pessimism",
-        "Geopolitical risks from US-Iran tensions and Trump tariff policies causing rapid sell-offs and $515M+ in liquidations",
-        "Bitcoin down 46% from October 2025 ATH of $126,210, trading in $60K-$70K consolidation range",
-        "Mining stocks (MARA, RIOT, HUT) under pressure from rising energy costs and reduced post-halving returns",
-        "Options markets pricing extreme downside protection at all-time high premiums despite stabilizing spot prices"
+        "Geopolitical tensions with Iran threatening Strait of Hormuz closure, causing oil price spikes to $100-110+ range and impacting mining economics",
+        "Regulatory progress with CLARITY Act advancing, improving sentiment and creating long-term bullish outlook for crypto assets",
+        "Strong Trump administration pro-crypto stance providing policy tailwinds and institutional legitimacy through spot Bitcoin ETFs",
+        "Rising energy costs pressuring Bitcoin mining profitability (MARA, RIOT stocks down 4-6%)",
+        "Technical breakdown below 200-day moving averages indicating medium-term bearish bias",
+        "Altcoins (XRP, Solana, Ethereum) showing recovery momentum but still vulnerable to macro shocks"
       ],
       "topTickers": [
         {
           "ticker": "BTC",
-          "sentiment": "bearish",
-          "confidence": 82,
-          "mentions": 450
-        },
-        {
-          "ticker": "MSTR",
           "sentiment": "mixed",
-          "confidence": 70,
-          "mentions": 185
+          "confidence": 60,
+          "mentions": 487
         },
         {
           "ticker": "ETH",
-          "sentiment": "bearish",
-          "confidence": 75,
-          "mentions": 220
+          "sentiment": "mixed",
+          "confidence": 58,
+          "mentions": 412
         },
         {
-          "ticker": "COIN",
-          "sentiment": "bearish",
-          "confidence": 68,
-          "mentions": 145
+          "ticker": "XRP",
+          "sentiment": "bullish",
+          "confidence": 72,
+          "mentions": 298
+        },
+        {
+          "ticker": "SOL",
+          "sentiment": "bullish",
+          "confidence": 70,
+          "mentions": 245
         },
         {
           "ticker": "MARA",
           "sentiment": "bearish",
-          "confidence": 76,
-          "mentions": 132
+          "confidence": 75,
+          "mentions": 156
         },
         {
           "ticker": "RIOT",
           "sentiment": "bearish",
-          "confidence": 74,
-          "mentions": 128
+          "confidence": 73,
+          "mentions": 142
         },
         {
-          "ticker": "SOL",
-          "sentiment": "mixed",
-          "confidence": 62,
-          "mentions": 95
-        },
-        {
-          "ticker": "XRP",
+          "ticker": "COIN",
           "sentiment": "mixed",
           "confidence": 65,
-          "mentions": 110
+          "mentions": 178
         }
       ],
       "news": [
         {
-          "title": "Bitcoin options signal extreme fear as downside protection premium hits new all-time high",
-          "source": "CoinDesk",
-          "url": "https://www.coindesk.com/",
-          "publishedAt": "2026-02-19",
-          "snippet": "Despite stabilizing spot prices, investors remain defensive, with leveraged speculation cooling and realized volatility dropping from 80 to 50, suggesting a cautious market sentiment."
-        },
-        {
           "title": "Why are Bitcoin, Ethereum and XRP Prices Crashing Today: Iran, Trump and the Strait of Hormuz Explained",
-          "source": "CryptoNews",
-          "url": "https://cryptonews.net/news/analytics/32589731/",
-          "publishedAt": "2026-02-19",
-          "snippet": "Every major cryptocurrency fell in lockstep with equities as the headlines broke. Bitcoin dropped 2.58% to $68,820, dragging its market capitalisation below $1.38 trillion. Ethereum fell harder, losing 3.36% to $2,082."
+          "source": "CoinPedia",
+          "url": "https://coinpedia.org/news/why-are-bitcoin-ethereum-and-xrp-prices-crashing-today-iran-trump-and-the-strait-of-hormuz-explained/",
+          "publishedAt": "2026-03-22",
+          "snippet": "Bitcoin, Ethereum and XRP tumbled sharply on Sunday after Iran responded to President Trump's 48-hour ultimatum with an escalation, vowing to fully close the Strait of Hormuz and strike energy, technology and water infrastructure across the Middle East."
         },
         {
-          "title": "Trump Signals 'Winding Down' of Iran Conflict: What it Means for Crypto Prices",
-          "source": "CryptoTicker",
-          "url": "https://cryptoticker.io/en/trump-truth-social-iran-crypto-impact/",
-          "publishedAt": "2026-02-19",
-          "snippet": "Bitcoin drops below $65,000 on Feb 23, 2026, as President Trump's 15% tariff hike sparks market volatility. Bitcoin rebounds to $67,000 following unconfirmed reports."
+          "title": "Ethereum, XRP, and Solana Price Prediction As CLARITY Act Advances After Senate–White House Deal",
+          "source": "CoinGape",
+          "url": "https://coingape.com/markets/ethereum-xrp-and-solana-price-prediction-as-clarity-act-advances-after-senate-white-house-deal/",
+          "publishedAt": "2026-03-22",
+          "snippet": "Ethereum, XRP, and Solana price hold gains as the Clarity Act deal lifts sentiment, while Bitcoin steadies above $70K support level. The CLARITY Act's progress is expected to facilitate formal markup proceedings soon."
         },
         {
           "title": "MARA Holdings Drops 6%, Riot Platforms Falls 5%: Two Bitcoin Miners Caught Between Energy Costs and an AI Pivot",
           "source": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/03/20/mara-holdings-drops-6-riot-platforms-falls-5-two-bitcoin-miners-caught-between-energy-costs-and-an-ai-pivot/",
           "publishedAt": "2026-03-20",
-          "snippet": "MARA stock is down 6%, falling below $9, and RIOT stock has slid 4% toward the $13.50 level as Bitcoin miners face pressure from rising energy costs and pivot toward AI."
+          "snippet": "Both Bitcoin miners MARA stock is down 6%, falling below $9, and RIOT stock has slid 4% toward the $13.50 level as rising energy costs and the shift to AI processing pressure margins."
         },
         {
-          "title": "Strategy's Record Bitcoin Buy Deepens Discount Story For MSTR Shares",
-          "source": "Simply Wall St",
-          "url": "https://simplywall.st/stocks/us/software/nasdaq-mstr/strategy/news/strategys-record-bitcoin-buy-deepens-discount-story-for-mstr",
-          "publishedAt": "2026-03-17",
-          "snippet": "Strategy acquired another 22,337 bitcoin for about $1.57 billion last week. A 30 day return of 10.19% shows positive short term momentum into this record Bitcoin purchase."
+          "title": "Crypto Market Crash: Why Prices Plummeted After Trump's Iran Oil Threat",
+          "source": "Crypto Ticker",
+          "url": "https://cryptoticker.io/en/crypto-market-crash-iran-oil-threat/",
+          "publishedAt": "2026-03-22",
+          "snippet": "Rising energy costs can make mining operations struggle to cover operational costs. The closure of the Strait of Hormuz remains the biggest tail risk for global energy markets in 2026."
+        },
+        {
+          "title": "Solana Price: Crypto Price Prediction Today as XRP and Dogecoin Hold Key Levels",
+          "source": "OpenPR",
+          "url": "https://www.openpr.com/news/4434164/solana-price-crypto-price-prediction-today-as-xrp-and-dogecoin",
+          "publishedAt": "2026-03-21",
+          "snippet": "Bitcoin is holding near $70,000, and price predictions for altcoins like XRP, Dogecoin, and Solana are turning higher after the SEC classified 16 tokens as digital commodities."
         }
       ],
       "socialBuzz": {
-        "platform": "reddit",
-        "mentions": 850,
-        "sentiment": "bearish",
+        "platform": "twitter/reddit",
+        "mentions": 892,
+        "sentiment": "mixed",
         "topPosts": [
-          "Reddit r/CryptoCurrency: 'Current Crypto Market Crash — What's Really Driving It?' - Discussion highlights BTC and altcoins seeing sharp declines with 60+ upvotes and 173 comments expressing concern",
-          "Reddit r/wallstreetbets: 'Will Bitcoin Burn Everyone This Time?' - 3K votes discussing MicroStrategy's slowing BTC purchases and potential liquidation concerns",
-          "Reddit r/BitcoinMarkets: Daily Discussion shows traders cautious about miners (MARA, RIOT, HUT) with concerns about volatility: 'MSTR volatility is crazy and after yesterday I will probably lower my position'",
-          "Reddit r/MSTR: 'MSTR vs COIN: which is the best proxy?' - Community debating Bitcoin exposure with comments like 'This stock is a patience stress test disguised as a Bitcoin play'"
+          "Crypto community debating impact of Iran Strait of Hormuz closure on Bitcoin mining economics and oil prices",
+          "CLARITY Act regulatory progress creating bullish sentiment for XRP and altcoins despite macro headwinds",
+          "Bitcoin mining stock investors concerned about rising energy costs pressuring profitability in MARA and RIOT",
+          "Discussion on social media about geopolitical risk premium being added to crypto assets due to macro shocks",
+          "Reddit/Twitter users highlighting contrast between long-term bullish fundamentals (ETFs, regulation) and short-term bearish macro events"
         ]
       }
     },
@@ -229,140 +248,126 @@
       "id": "tech-stocks",
       "title": "Tech",
       "description": "Broader technology sector",
-      "lastUpdated": "2026-03-23T01:20:13.057Z",
-      "mood": "mixed",
-      "confidence": 75,
-      "summary": "Tech sector sentiment is mixed with notable bearish pressure from the Super Micro smuggling scandal and Micron's disappointing guidance, offset by resilient AI infrastructure demand and selective strength in mega-cap names. The sector faces headwinds from valuation concerns and geopolitical risks, while maintaining support from continued AI investments.",
-      "overallAnalysis": "The technology sector is experiencing a turbulent period marked by significant divergence between winners and losers. The most dramatic development is Super Micro Computer's 28-33% plunge following federal charges against its co-founder for smuggling $2.5 billion worth of Nvidia AI chips to China, creating regulatory and compliance concerns across the semiconductor supply chain. Additionally, Micron Technology disappointed markets with Q3 fiscal 2026 guidance that fell short of elevated expectations, causing a 3.9% drop despite the stock trading at historically low valuations. However, the broader tech narrative remains anchored by AI infrastructure spending, with companies like Nvidia, Broadcom, and Oracle showing resilience. Oracle gained momentum from its $2 billion TikTok U.S. venture stake. The Fear & Greed Index sits at extreme fear levels (15), while the information technology sector trades at its lowest valuation premium to the S&P 500 in the post-pandemic era. Reddit's WallStreetBets community shows longer-term bullishness on tech, selecting Amazon, Google, Tesla, and Micron among their top 2026 picks. Market volatility has been amplified by quadruple witching, inflation concerns, and the tech sector declining 2.83% in recent sessions.",
+      "lastUpdated": "2026-03-23T02:22:59.395Z",
+      "mood": "bearish",
+      "confidence": 72,
+      "summary": "The tech sector is experiencing significant headwinds with a sharp bearish reversal. The Nasdaq has declined over 2% amid geopolitical tensions, inflation concerns, and rising interest rates erasing hopes for Fed rate cuts. A major scandal involving Super Micro Computer executives charged with smuggling $2.5 billion in Nvidia chips to China has sent shockwaves through the sector, with SMCI plunging 33%.",
+      "overallAnalysis": "The technology sector is currently in a bearish phase marked by multiple converging negative factors. The tech-heavy Nasdaq Composite has dropped significantly, losing 2% in recent trading sessions and breaching key technical support levels including the 200-day moving average for the first time in over 200 days—a significant bearish signal. The market has shifted from bullish AI enthusiasm to pricing in a 'higher-for-longer' interest rate environment, effectively erasing investor hopes for Fed rate cuts in the first half of 2026. Key concerns include escalating geopolitical tensions (Middle East conflict), persistent inflation fears, and semiconductor supply chain vulnerabilities highlighted by the shocking indictment of Supermicro's co-founder and two employees for allegedly smuggling $2.5 billion worth of Nvidia AI chips to China. This scandal has created credibility concerns across the broader semiconductor and AI infrastructure space. While earlier in 2024 and 2025, tech stocks benefited from AI enthusiasm with impressive performance (Nasdaq up 5,000 points over seven years, companies like NVIDIA reaching $5 trillion market cap), the market is now correcting from what many analysts view as overvaluation. The VIX 'fear gauge' has surged to 28.4, indicating elevated investor anxiety. However, some analysts note that historically, tech stocks have rebounded strongly within six months after 10% corrections, suggesting tactical opportunities ahead for contrarian investors.",
       "keyFactors": [
-        "Super Micro Computer smuggling scandal creating regulatory headwinds and supply chain concerns",
-        "Micron's disappointing guidance highlighting potential slowdown in memory chip demand despite AI tailwinds",
-        "Information technology sector trading at lowest valuation premium to S&P 500 since pandemic, suggesting potential value opportunity",
-        "Continued AI infrastructure investment supporting semiconductor leaders like Nvidia, Broadcom, and ASML",
-        "Fear & Greed Index at extreme fear (15), indicating oversold conditions and potential contrarian buying opportunity",
-        "Geopolitical tensions and export control risks affecting chip manufacturers with China exposure"
+        "Rising interest rates and 'higher-for-longer' policy expectations erasing Fed rate cut hopes",
+        "Geopolitical tensions and Middle East conflict creating risk-off sentiment",
+        "Supermicro chip smuggling scandal ($2.5B NVIDIA GPU scandal) damaging sector credibility",
+        "Nasdaq breached 200-day moving average - technical bearish signal",
+        "AI valuation premium under stress testing amid infrastructure cost concerns",
+        "VIX fear gauge elevated at 28.4 indicating heightened volatility",
+        "Persistent inflation concerns despite some recent moderation",
+        "Semiconductor hardware sector weakness across ARM, AVGO, MRVL, and other chip stocks"
       ],
       "topTickers": [
         {
           "ticker": "SMCI",
           "sentiment": "bearish",
           "confidence": 95,
-          "mentions": 847
+          "mentions": 87,
+          "context": "Super Micro Computer shares plunged 33% after co-founder arrested for alleged chip smuggling scheme worth $2.5 billion"
         },
         {
           "ticker": "NVDA",
-          "sentiment": "mixed",
-          "confidence": 70,
-          "mentions": 612
-        },
-        {
-          "ticker": "MU",
-          "sentiment": "mixed",
-          "confidence": 65,
-          "mentions": 489
-        },
-        {
-          "ticker": "ORCL",
-          "sentiment": "bullish",
-          "confidence": 78,
-          "mentions": 276
-        },
-        {
-          "ticker": "AAPL",
-          "sentiment": "mixed",
+          "sentiment": "bearish",
           "confidence": 68,
-          "mentions": 423
+          "mentions": 156,
+          "context": "NVIDIA chips were target of smuggling scheme; investor sentiment showing potential shift in confidence despite strong Q2 earnings"
         },
         {
           "ticker": "MSFT",
           "sentiment": "mixed",
-          "confidence": 67,
-          "mentions": 398
+          "confidence": 55,
+          "mentions": 142,
+          "context": "Microsoft benefiting from Azure cloud growth (39% YoY) but facing broader tech sector headwinds; part of Magnificent Seven under pressure"
         },
         {
-          "ticker": "AVGO",
-          "sentiment": "bullish",
-          "confidence": 72,
-          "mentions": 334
-        },
-        {
-          "ticker": "AMD",
-          "sentiment": "mixed",
-          "confidence": 63,
-          "mentions": 287
+          "ticker": "AAPL",
+          "sentiment": "bearish",
+          "confidence": 62,
+          "mentions": 118,
+          "context": "Apple stock declining amid broader tech sector correction and Nasdaq selloff; concentration risk in mega-cap stocks"
         },
         {
           "ticker": "GOOGL",
-          "sentiment": "bullish",
-          "confidence": 71,
-          "mentions": 312
+          "sentiment": "mixed",
+          "confidence": 58,
+          "mentions": 124,
+          "context": "Alphabet cloud revenue growth strong (48% YoY) but stock under pressure from sector-wide correction and rising rates"
+        },
+        {
+          "ticker": "AVGO",
+          "sentiment": "bearish",
+          "confidence": 75,
+          "mentions": 63,
+          "context": "Broadcom down more than 4% amid semiconductor sector weakness and chip-related concerns"
+        },
+        {
+          "ticker": "ARM",
+          "sentiment": "bearish",
+          "confidence": 72,
+          "mentions": 58,
+          "context": "ARM Holdings down more than 4% as semiconductor hardware sector faces headwinds"
         },
         {
           "ticker": "AMZN",
-          "sentiment": "bullish",
-          "confidence": 73,
-          "mentions": 365
-        },
-        {
-          "ticker": "TSLA",
           "sentiment": "mixed",
-          "confidence": 64,
-          "mentions": 298
-        },
-        {
-          "ticker": "ASML",
-          "sentiment": "bullish",
-          "confidence": 69,
-          "mentions": 156
+          "confidence": 60,
+          "mentions": 97,
+          "context": "Amazon Web Services showing strong cloud growth (24% YoY) but facing sector-wide selling pressure"
         }
       ],
       "news": [
         {
-          "title": "US charges 3 tied to Super Micro Computer with helping smuggle billions of dollars of AI chips to China",
-          "source": "Reuters",
-          "url": "https://www.reuters.com/world/us-charges-three-people-with-conspiring-divert-ai-tech-china-2026-03-19/",
+          "title": "Supermicro's cofounder was just arrested for allegedly smuggling $2.5 billion in GPUs to China",
+          "source": "Fortune",
+          "url": "https://fortune.com/2026/03/19/supermicro-arrested-founder-smuggling-gpu-china/",
           "publishedAt": "2026-03-19",
-          "snippet": "Three people associated with artificial intelligence server maker Super Micro Computer Inc (SMCI.O), including its co-founder, were charged with helping smuggle at least $2.5 billion of U.S. AI chips to China in violation of export controls."
+          "snippet": "Throughout the scheme, the defendants allegedly used encrypted messaging apps to discuss server quantities, delivery locations in China, and ways of keeping the operation hidden from Supermicro's compliance team and U.S. authorities. The DOJ says the Nvidia chips in the Supermicro servers were the target for the buyers."
         },
         {
-          "title": "Wall Street ends higher, lifted by Nvidia and other AI stocks",
-          "source": "Reuters",
-          "url": "https://www.reuters.com/business/us-stock-futures-trend-higher-tech-sentiment-improves-2026-02-18/",
-          "publishedAt": "2026-02-18",
-          "snippet": "Wall Street ended higher on Wednesday, lifted by gains in Nvidia, Amazon and other technology-related heavyweights following recent jitters about artificial intelligence investments and spending sustainability."
+          "title": "Super Micro shares plunge 33% after co-founder arrested for chip smuggling scheme",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/03/19/us-tech-execs-smuggled-nvidia-chips-to-china-prosecutors-say.html",
+          "publishedAt": "2026-03-19",
+          "snippet": "People tied to an unnamed U.S. server maker illegally diverted billions in equipment containing Nvidia artificial intelligence chips to China, U.S. prosecutors said. Super Micro said one of the defendants was a co-founder and executive of its operations."
         },
         {
-          "title": "Stocks Rally as Strength in Tech Boosts Market Sentiment",
-          "source": "Nasdaq",
-          "url": "https://www.nasdaq.com/articles/stocks-rally-strength-tech-boosts-market-sentiment",
-          "publishedAt": "2026-03-21",
-          "snippet": "Stock indexes settled higher on Friday as a rally in cloud infrastructure stocks improved market sentiment and lifted the broader market. Oracle rose more than 7% after TikTok CEO announced signed binding agreements for U.S. operations."
-        },
-        {
-          "title": "Micron Technology (MU) saw its stock price tumble 3.9% after its third-quarter fiscal 2026 guidance failed to impress the market",
-          "source": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/news/live/tech-stocks-today-supermicro-stock-dives-after-us-charges-employees-with-smuggling-nvidia-chips-to-china-144220474.html",
+          "title": "The Latest Super Micro Computer Scandal Sinks the Stock. Is This a Buying Opportunity or Should Investors Stay Away?",
+          "source": "The Motley Fool",
+          "url": "https://www.fool.com/investing/2026/03/20/supermicro-scandal-sinks-stock-buy-stay-away-smci/",
           "publishedAt": "2026-03-20",
-          "snippet": "Despite the initial market reaction, analysts note that Micron stock is trading at a price-to-earnings multiple of 6 times 2026 estimates—below its historical multiple, suggesting potential value at current levels."
+          "snippet": "The government has accused the employees of smuggling around $2.5 billion worth of servers with Nvidia graphics processing units (GPUs) to China. The U.S. has strict rules against sending its top chips to China to protect national security."
         },
         {
-          "title": "Oracle's stake in TikTok US joint venture is worth roughly $2 billion, filing shows",
-          "source": "Reuters",
-          "url": "https://www.reuters.com/world/china/oracles-stake-tiktok-us-joint-venture-is-worth-roughly-2-billion-filing-shows-2026-03-11/",
-          "publishedAt": "2026-03-11",
-          "snippet": "Oracle's stake in TikTok's U.S. business operations is worth around $2 billion, a filing showed on Wednesday, more than a month after its Chinese parent ByteDance finalized a deal to set up a majority-owned American joint venture."
+          "title": "Nasdaq's Tech Slump: The tech-heavy index falls 1.2% as rising yields and hardware sector weakness weigh on growth",
+          "source": "FinancialContent",
+          "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-20-nasdaqs-tech-slump-the-tech-heavy-index-falls-1-2-as-rising-yields-and-hardware-sector-weakness-weigh-on-growth",
+          "publishedAt": "2026-03-20",
+          "snippet": "As the VIX 'fear gauge' surged to 28.4, traders have begun pricing in a 'higher-for-longer' interest rate path, effectively erasing hopes for Federal Reserve rate cuts in the first half of 2026. This technical breakdown in the Nasdaq suggests that the premium investors were willing to pay for artificial intelligence and semiconductor growth is undergoing its most rigorous stress test."
+        },
+        {
+          "title": "Stocks Retreat as Big Tech Falters - ARM Holdings and Broadcom Down More Than 4%",
+          "source": "Nasdaq",
+          "url": "https://www.nasdaq.com/articles/stocks-retreat-big-tech-falters",
+          "publishedAt": "2026-03-20",
+          "snippet": "ARM Holdings (ARM) and Broadcom (AVGO) are down more than -4%. Also, Marvel Technology (MRVL) is down more than -3%, and Lam Research (LRCX), Applied Materials (AMAT), and KLA Corp (KLAC) are down more than -2%. The semiconductor hardware sector is showing broad-based weakness."
         }
       ],
       "socialBuzz": {
         "platform": "reddit",
-        "mentions": 2847,
+        "mentions": 342,
         "sentiment": "mixed",
         "topPosts": [
-          "WallStreetBets 2026 Index features AMZN, GOOGL, TSLA, MU, and PLTR as top long-term tech picks, showing retail confidence in mega-cap tech and AI infrastructure",
-          "Reddit investors discussing value opportunities in tech sector after recent selloff, with information technology trading at lowest premium to S&P 500 since pandemic",
-          "Major discussion around NVDA's resilience despite semiconductor sector volatility, with users noting 'blockbuster earnings' but confusion over stock decline",
-          "SOFI, AMD, ASML, and NVDA identified as attractive buys during recent tech dip on r/investing, with focus on fundamentals over short-term noise",
-          "Concern over AI bubble risks balanced by belief in continued infrastructure spending, with semiconductor stocks like MU and AVGO seen as undervalued despite recent guidance misses"
+          "r/stocks: Tech stocks are down because investors realize that AI is so good it will destroy SaaS businesses and cut revenue",
+          "r/ValueInvesting: Most of the stocks that people think are gonna do well trade at a premium, and all the stocks that people think are garbage are cut in half",
+          "r/stocks: Big Six (AAPL, AMZN, GOOGL, META, MSFT, NVDA): Combined Quarterly Revenue $680 billion and Net Income $202 billion, but sentiment has shifted bearish",
+          "r/cscareerquestions: Discussion about tech recession - job market corrected from 2022 peak but not catastrophic",
+          "r/ValueInvesting: Is the Entire Tech Sector Massively Overvalued Right Now?! Debate continues about NVDA and sector valuations"
         ]
       }
     },
@@ -370,144 +375,127 @@
       "id": "energy",
       "title": "Energy",
       "description": "Oil, gas, and renewable energy",
-      "lastUpdated": "2026-03-23T01:21:33.247Z",
+      "lastUpdated": "2026-03-23T02:23:41.651Z",
       "mood": "bullish",
-      "confidence": 82,
-      "summary": "Energy sector sentiment is strongly bullish driven by the Iran conflict causing oil prices to surge to $113+ per barrel, up from $72 before the war began. Traditional oil & gas stocks are experiencing significant gains while renewable energy stocks show mixed but improving sentiment as infrastructure demands increase.",
-      "overallAnalysis": "The Energy sector is experiencing robust bullish momentum in March 2026, primarily driven by the ongoing Iran war which has disrupted 20% of global oil supplies through the closure of the Strait of Hormuz. Brent crude has spiked from approximately $70 to over $113 per barrel, with some forecasts suggesting potential for $200/barrel if the conflict escalates. Major oil & gas companies like ExxonMobil, Chevron, and ConocoPhillips are hitting or approaching record highs, benefiting from elevated crude prices and strong operational performance. The refining sector is also seeing exceptional performance, with Marathon Petroleum, Valero Energy, and Phillips 66 posting strong earnings beats and margins. Social media sentiment on Reddit reflects cautious optimism, with discussions about energy stocks being a key play for 2026, though some investors warn about potential oil surplus later in the year. Renewable energy stocks show mixed sentiment but are gaining attention due to AI-driven power demands and infrastructure investments, with names like Brookfield Renewable and NextEra Energy maintaining steady interest despite sector headwinds.",
+      "confidence": 75,
+      "summary": "The energy sector is displaying strong bullish momentum driven by geopolitical tensions in the Middle East, particularly Iran's attacks on Qatar's LNG infrastructure and threats to the Strait of Hormuz. Oil prices have surged above $100/barrel in recent weeks, benefiting traditional energy stocks significantly. However, sentiment remains mixed on renewable energy as it faces political headwinds despite long-term structural tailwinds.",
+      "overallAnalysis": "The energy sector is experiencing a pronounced bullish rally driven primarily by geopolitical risks. Oil and gas prices have spiked substantially following Iranian military strikes on Qatar's major gas facility and escalating tensions around global shipping routes. Traditional oil and gas majors like ExxonMobil (XOM), Chevron (CVX), and ConocoPhillips (COP) have posted strong year-to-date gains ranging from 21.5% to 36.7%. LNG stocks have been particular winners, with Cheniere Energy (LNG) up over 40% on the month and trading around $281, while NextDecade (NEXT) and Venture Global (VG) have also surged on supply disruption concerns. Energy sector ETF XLE has been one of the leading sector performers. However, this bullish sentiment is heavily dependent on geopolitical factors rather than fundamental improvements in supply/demand dynamics. The renewable energy subsector presents a more nuanced picture—while it has long-term growth catalysts, current sentiment is bearish due to political uncertainty and macroeconomic headwinds. Retail investors have been actively rotating into energy and LNG plays, evidenced by record trading volumes. The market expects this energy shock to persist, reshaping long-term supply expectations and energy policy globally.",
       "keyFactors": [
-        "Iran conflict disrupting Strait of Hormuz shipping, cutting global oil supply by ~8M barrels/day and pushing Brent crude to $113+ per barrel",
-        "Major oil companies (XOM, CVX, COP) hitting record highs with strong operational performance and elevated crude prices driving exceptional margins",
-        "Refiners posting outstanding Q4 earnings beats (MPC +50% vs consensus) with refining margins at $18.65/barrel driven by access to discounted crude",
-        "AI and data center energy demands creating long-term structural support for both traditional and renewable energy infrastructure investments",
-        "Energy Select Sector SPDR ETF (XLE) showing strong positive correlation (0.80) with SPY and outperforming with 16% quarterly gains"
+        "Geopolitical tensions in Middle East driving oil prices above $100/barrel amid fears of supply disruptions through Strait of Hormuz",
+        "Iranian attacks on Qatar LNG infrastructure creating structural supply constraints and boosting US LNG export prospects",
+        "Retail investor rotation into energy ETFs and LNG stocks with record trading volumes on supply disruption narratives",
+        "Renewable energy sentiment bearish despite long-term tailwinds due to current political headwinds and macro uncertainty",
+        "Strong earnings potential for oil majors and LNG exporters if elevated prices persist, offset by demand destruction concerns in inflationary environment"
       ],
       "topTickers": [
         {
+          "ticker": "LNG",
+          "sentiment": "bullish",
+          "confidence": 85,
+          "mentions": 127
+        },
+        {
           "ticker": "XOM",
           "sentiment": "bullish",
-          "confidence": 88,
-          "mentions": 156
+          "confidence": 80,
+          "mentions": 95
         },
         {
           "ticker": "CVX",
           "sentiment": "bullish",
-          "confidence": 86,
-          "mentions": 142
-        },
-        {
-          "ticker": "COP",
-          "sentiment": "bullish",
-          "confidence": 81,
-          "mentions": 98
-        },
-        {
-          "ticker": "MPC",
-          "sentiment": "bullish",
-          "confidence": 85,
-          "mentions": 87
+          "confidence": 78,
+          "mentions": 88
         },
         {
           "ticker": "XLE",
           "sentiment": "bullish",
-          "confidence": 84,
+          "confidence": 82,
           "mentions": 76
         },
         {
-          "ticker": "DVN",
+          "ticker": "NEXT",
           "sentiment": "bullish",
-          "confidence": 78,
-          "mentions": 72
+          "confidence": 79,
+          "mentions": 52
         },
         {
-          "ticker": "VLO",
-          "sentiment": "bullish",
-          "confidence": 82,
-          "mentions": 68
-        },
-        {
-          "ticker": "PSX",
-          "sentiment": "bullish",
-          "confidence": 80,
-          "mentions": 64
-        },
-        {
-          "ticker": "HAL",
-          "sentiment": "bullish",
-          "confidence": 75,
-          "mentions": 58
-        },
-        {
-          "ticker": "WMB",
+          "ticker": "COP",
           "sentiment": "bullish",
           "confidence": 76,
-          "mentions": 54
+          "mentions": 48
         },
         {
-          "ticker": "SLB",
-          "sentiment": "bullish",
-          "confidence": 74,
-          "mentions": 52
+          "ticker": "VG",
+          "sentiment": "mixed",
+          "confidence": 65,
+          "mentions": 41
         },
         {
           "ticker": "BEP",
           "sentiment": "mixed",
-          "confidence": 65,
-          "mentions": 48
+          "confidence": 60,
+          "mentions": 28
         },
         {
-          "ticker": "NEE",
+          "ticker": "FSLR",
+          "sentiment": "bearish",
+          "confidence": 65,
+          "mentions": 22
+        },
+        {
+          "ticker": "ENPH",
           "sentiment": "mixed",
-          "confidence": 67,
-          "mentions": 45
+          "confidence": 62,
+          "mentions": 18
         }
       ],
       "news": [
         {
-          "title": "Iran War Live Updates: Tehran Vows to Destroy Key Infrastructure After Trump's Power Plant Threat",
-          "source": "The New York Times",
-          "url": "https://www.nytimes.com/live/2026/03/22/world/iran-war-oil-trump",
-          "publishedAt": "2026-03-22",
-          "snippet": "The price of Brent crude, the international oil benchmark, rose roughly 1 percent on Sunday evening to over $113 per barrel, up from $72.48 before the war began."
+          "title": "Qatar LNG Blown Offline, U.S. Gas Stocks Ignite - Cheniere Energy (NYSE:LNG)",
+          "source": "Benzinga",
+          "url": "https://www.benzinga.com/trading-ideas/movers/26/03/51391500/qatar-lng-blown-offline-u-s-gas-stocks-ignite",
+          "publishedAt": "2026-03-19",
+          "snippet": "The stock has extended its recent uptrend, with shares trading around the mid‑$280s on Friday and up more than 12% this week as the Qatar headlines hit, outpacing the broader energy complex."
         },
         {
-          "title": "'The stakes are enormous': how a prolonged Iran war could shock the global economy",
-          "source": "The Guardian",
-          "url": "https://www.theguardian.com/news/ng-interactive/2026/mar/22/iran-war-global-economy-donald-trump-oil-prices-inflation",
-          "publishedAt": "2026-03-22",
-          "snippet": "Iran has threatened to send oil to $200 a barrel through its fightback, targeting shipping through the narrow seaborne passage between its southern shore and Oman, as well as refineries and pipelines across the Middle East."
+          "title": "Cheniere, Venture Global shares surge amid Iran attacks on Qatar LNG infrastructure",
+          "source": "Reuters/Investing.com",
+          "url": "https://www.investing.com/news/stock-market-news/cheniere-venture-global-shares-surge-amid-iran-attacks-on-qatar-lng-infrastructure-4571568",
+          "publishedAt": "2026-03-19",
+          "snippet": "Some of the lost Qatari supply could be offset by new U.S. capacity expected to come online from Golden Pass LNG owned by Exxon Mobil and QatarEnergy in Texas, in addition to three other plants under construction by Sempra, NextDecade and Venture Global."
         },
         {
-          "title": "Refiners Are Quiet Winners in 2026: Wall Street's Signals Are Hard to Ignore",
-          "source": "Yahoo Finance / 24/7 Wall St.",
-          "url": "https://finance.yahoo.com/news/refiners-quiet-winners-2026-wall-152554757.html",
-          "publishedAt": "2026-03-11",
-          "snippet": "Marathon Petroleum (MPC) reported Q4 adjusted EPS of $4.07, beating consensus by 50.18%, with refining margins reaching $18.65 per barrel and 95% crude utilization driven by access to discounted Venezuelan heavy crude."
+          "title": "Energy stocks rose in early trading on Monday as oil prices surged above $100 in the wake of countries in the Middle East cutting production",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/03/08/stock-market-today-live-updates.html",
+          "publishedAt": "2026-03-09",
+          "snippet": "Energy stocks rose in early trading on Monday as oil prices surged above $100 in the wake of countries in the Middle East cutting production."
         },
         {
-          "title": "Energy Shock Drives ExxonMobil and Chevron Stocks to Record Highs",
-          "source": "GuruFocus",
-          "url": "https://www.gurufocus.com/news/8714832/energy-shock-drives-exxonmobil-and-chevron-stocks-to-record-highs",
-          "publishedAt": "2026-03-15",
-          "snippet": "The ongoing conflict has triggered an energy shock, propelling the stock prices of major oil companies, including ExxonMobil XOM, Chevron (CVX), and Shell, to reach or approach record highs."
+          "title": "Stock markets rattled and energy prices soar after strikes on Qatar gas hub",
+          "source": "BBC News",
+          "url": "https://www.bbc.com/news/articles/c78x83lpgngo",
+          "publishedAt": "2026-03-19",
+          "snippet": "Oil and gas prices rose sharply and stock markets slid back on Thursday after Iranian strikes hit energy infrastructure in the Middle East, including Qatar's main gas facility."
         },
         {
-          "title": "One of These Oil Services Stocks Is Pulling Away From the Pack: Baker Hughes, Haliburton, SLB",
-          "source": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/news/one-oil-services-stocks-pulling-114031910.html",
-          "publishedAt": "2026-03-17",
-          "snippet": "Benchmark West Texas Intermediate crude oil surged from $55.44 a barrel in mid-December 2025 to $94.65 as of March 9, and the oil services sector is moving with it."
+          "title": "Will the Middle East Conflict Speed Up the Energy Transition?",
+          "source": "Investing.com",
+          "url": "https://www.investing.com/news/economy-news/will-the-middle-east-conflict-speed-up-the-energy-transition-4574101",
+          "publishedAt": "2026-03-20",
+          "snippet": "The resurgence of geopolitical instability in the Middle East is acting as a powerful catalyst for Europe's green energy transition, effectively mirroring the structural shifts triggered by the 2022 invasion of Ukraine."
         }
       ],
       "socialBuzz": {
         "platform": "reddit",
-        "mentions": 342,
-        "sentiment": "bullish",
+        "mentions": 312,
+        "sentiment": "mixed",
         "topPosts": [
-          "Reddit r/stocks: 'Is 2026 the year of energy stocks?' - Discussions highlight energy sector outperformance with focus on traditional oil/gas and nuclear power stocks",
-          "Reddit r/ValueInvesting: 'Energy Stocks - Your Picks for 2026?' - Mixed sentiment with bullish views on traditional energy but concerns about oil surplus production expected throughout 2026",
-          "Reddit r/investing: 'Are energy stocks about to blow up?' - Strong bullish sentiment noting recent performance with energy doing well in March given geopolitical events",
-          "Reddit r/stocks: 'Is investing in renewable energy a no brainer?' - Debate over renewable valuations with interest in renewables as cheap capital environment could provide bounce"
+          "Energy Stocks Are Still Cheap… and Nobody Seems to Care - r/ValueInvesting: Sentiment hates energy but math doesn't. Traders pricing in slow decline but strong demand fundamentals.",
+          "The price of renewables is dramatically undervalued in the medium term - r/investing: Sector too sensitive to politics currently against it, but structural case remains strong.",
+          "Investing in energy stocks - r/ValueInvesting: Market underappreciates energy despite record years. ABO energy down on sector sentiment despite strong 2024 performance.",
+          "Warning...energy stocks are currently a value trap - r/ValueInvesting: Discussion of whether current valuations offer genuine value or represent trap given demand concerns.",
+          "Thoughts on investing in energy companies - r/investing: Only a few winners emerging in sector over 5+ year horizon, indicating selectivity important."
         ]
       }
     },
@@ -515,118 +503,120 @@
       "id": "defense-stocks",
       "title": "Defense",
       "description": "Defense contractors, aerospace, and government suppliers",
-      "lastUpdated": "2026-03-23T01:23:56.891Z",
-      "mood": "mixed",
-      "confidence": 72,
-      "summary": "Defense sector sentiment is mixed as stocks experience a correction after recent rally peaks. While major contractors benefit from Iran conflict and increased military spending, investors are taking profits after significant gains, with concerns about valuations at all-time highs. Palantir's Pentagon AI contract provides a bright spot for defense tech.",
-      "overallAnalysis": "The Defense sector is experiencing a complex market environment in late March 2026. After substantial rallies driven by the Iran conflict and increased defense budgets, the sector has entered a consolidation phase with profit-taking evident across major contractors. The iShares U.S. Aerospace & Defense ETF (ITA) surged 14% earlier in 2026 but has since stalled, with some defense stocks sliding. Major contractors like Lockheed Martin (LMT), RTX (RTX), Northrop Grumman (NOC), and General Dynamics (GD) remain near all-time highs but face valuation concerns. Reddit discussions show investors are divided—some are holding long positions anticipating continued growth from the 'security supercycle,' while others are selling at all-time highs to lock in gains. The Pentagon's decision to adopt Palantir's AI system as a core military platform represents a significant positive development for defense technology stocks. Trump's pressure on defense companies to stop buybacks and increase production has added volatility. Overall, while fundamentals remain strong with massive backlogs ($260B for RTX) and increased military budgets ($961.6B for 2024), the market is recalibrating after the rapid ascent, leading to a mixed sentiment as investors weigh strong growth prospects against stretched valuations.",
+      "lastUpdated": "2026-03-23T02:24:30.895Z",
+      "mood": "bullish",
+      "confidence": 85,
+      "summary": "The Defense sector is experiencing strong bullish momentum driven by Trump's $1.5 trillion defense spending proposal, rising geopolitical tensions, and record backlogs at major contractors. Major defense stocks including RTX, LMT, NOC, and GE Aerospace have surged with January 2026 showing Lockheed Martin up 31% amid broad sector strength.",
+      "overallAnalysis": "The Defense sector is exhibiting exceptionally bullish sentiment across multiple drivers. President Trump's January 2026 announcement of a proposed $1.5 trillion defense budget for 2027 (significantly higher than the $901 billion Congress approved for 2026) has catalyzed a sector-wide rally. The defense contractors have reported record backlogs and raised their 2025-2026 outlooks, with RTX posting a record $251 billion backlog and GE Aerospace achieving a $190-200 billion backlog. Geopolitical tensions, including US-Iran military escalations and the broader global conflict environment, continue to provide tailwinds. Trump's executive order on January 7, 2026 'Prioritizing the Warfighter in Defense Contracting' has shifted focus from shareholder returns to production capacity expansion, with contractors committing to quadruple production of sophisticated weaponry. Supply chain constraints have become a competitive advantage for incumbents, driving pricing power. The sector has maintained strong momentum through March 2026, with recurring announcements of major contract wins and production acceleration agreements. While some concerns exist about execution on accelerated production timelines and Trump's criticism of specific contractors regarding buyback policies, the fundamental outlook remains highly positive. Reddit discussions show investors taking long-term positions despite valuations, with several noting the multi-year visibility of defense spending cycles.",
       "keyFactors": [
-        "Defense stocks experiencing profit-taking and correction after significant 2025-2026 rally, with some stocks near all-time highs facing valuation concerns",
-        "Iran conflict and geopolitical tensions driving demand for missiles, ammunition, and defense systems with companies reporting strong backlogs",
-        "Palantir securing major Pentagon contract to adopt Maven AI as core military system, representing significant win for defense tech sector",
-        "Trump administration demanding increased production (quadruple output) while pressuring companies to halt buybacks and dividends",
-        "Strong fundamentals with massive contract backlogs (RTX $260B, NOC securing B-21 Raider deals) but market entering 'mean reversion' period"
+        "Trump's $1.5 trillion proposed defense budget for 2027 and executive orders on production acceleration",
+        "Record backlogs at major contractors (RTX $251B, GE Aerospace $190-200B, others at multi-year highs)",
+        "Rising geopolitical tensions including US-Iran military escalation and NATO spending commitments",
+        "Supply chain constraints creating competitive moat for established contractors",
+        "Defense contractors committing to quadruple production and increased capex spending",
+        "GE Aerospace 30% increase in defense deliveries in 2025 with 61% Q4 order growth",
+        "Major contract wins accelerating (Boeing $12.8B, HII $9.5B Navy orders, GE Aerospace $6.4B+ in recent awards)"
       ],
       "topTickers": [
         {
-          "ticker": "PLTR",
+          "ticker": "RTX",
           "sentiment": "bullish",
           "confidence": 88,
-          "mentions": 147
+          "mentions": 145
         },
         {
           "ticker": "LMT",
-          "sentiment": "mixed",
-          "confidence": 75,
-          "mentions": 312
-        },
-        {
-          "ticker": "RTX",
-          "sentiment": "mixed",
-          "confidence": 74,
-          "mentions": 289
+          "sentiment": "bullish",
+          "confidence": 90,
+          "mentions": 162
         },
         {
           "ticker": "NOC",
-          "sentiment": "mixed",
-          "confidence": 73,
-          "mentions": 251
+          "sentiment": "bullish",
+          "confidence": 85,
+          "mentions": 128
+        },
+        {
+          "ticker": "GE",
+          "sentiment": "bullish",
+          "confidence": 87,
+          "mentions": 98
         },
         {
           "ticker": "GD",
-          "sentiment": "mixed",
-          "confidence": 71,
-          "mentions": 198
+          "sentiment": "bullish",
+          "confidence": 84,
+          "mentions": 76
+        },
+        {
+          "ticker": "HII",
+          "sentiment": "bullish",
+          "confidence": 86,
+          "mentions": 72
+        },
+        {
+          "ticker": "KTOS",
+          "sentiment": "bullish",
+          "confidence": 82,
+          "mentions": 65
         },
         {
           "ticker": "BA",
-          "sentiment": "bearish",
-          "confidence": 68,
-          "mentions": 176
-        },
-        {
-          "ticker": "LHX",
-          "sentiment": "bullish",
-          "confidence": 76,
-          "mentions": 143
-        },
-        {
-          "ticker": "ITA",
           "sentiment": "mixed",
-          "confidence": 70,
-          "mentions": 98
+          "confidence": 72,
+          "mentions": 84
         }
       ],
       "news": [
         {
-          "title": "The Pentagon Just Dropped a Bombshell for Palantir Stock Investors",
+          "title": "Here's Why Lockheed Martin Surged 31% in January",
           "source": "The Motley Fool",
-          "url": "https://www.fool.com/investing/2026/03/22/the-pentagon-just-dropped-a-bombshell-for-palantir/",
-          "publishedAt": "2026-03-22",
-          "snippet": "The system was deployed to the Middle East and has reportedly carried out thousands of strikes against Iran over the past three weeks. Palantir was initially awarded a $480 million, five-year contract with the U.S. military, later increased to as much as $1.3 billion."
+          "url": "https://www.fool.com/investing/2026/02/04/heres-why-lockheed-martin-surged-31-in-january/",
+          "publishedAt": "2026-02-04",
+          "snippet": "Lockheed Martin (LMT) stock rose an astonishing 31.1% in January according to data provided by S&P Global Market Intelligence, as the company and the U.S. defense sector were bolstered by President Trump's call for a $1.5 trillion defense budget."
         },
         {
-          "title": "Exclusive: Pentagon to adopt Palantir AI as core US military system, memo says",
+          "title": "Defense companies raise 2025 outlooks on higher demand",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2025/10/21/defense-ge-northrop-grumman-rtx-lockheed-martin-earnings.html",
+          "publishedAt": "2025-10-21",
+          "snippet": "GE Aerospace, Northrop Grumman, RTX and Lockheed Martin all raised their 2025 outlooks in their earnings reports Tuesday morning, citing higher demand. The defense firms also topped earnings estimates for the third quarter."
+        },
+        {
+          "title": "'It Takes Money to Kill Bad Guys': Iran War Set to Boost Business For These Defense Contractors",
+          "source": "Time",
+          "url": "https://time.com/article/2026/03/19/trump-iran-war-set-to-boost-profits-for-these-defense-contractors/",
+          "publishedAt": "2026-03-19",
+          "snippet": "Trump met with defense contractors at the White House this month where the companies had agreed to 'quadruple' production of 'exquisite' weapons, a term of art referring to sophisticated and expensive military equipment."
+        },
+        {
+          "title": "GE Aerospace Crushes Q4: Orders Surge 74% as Aviation Giant Posts Record Backlog",
+          "source": "Investing.com",
+          "url": "https://www.investing.com/analysis/ge-aerospace-crushes-q4-orders-surge-74-as-aviation-giant-posts-record-backlog-200673716",
+          "publishedAt": "2026-01-22",
+          "snippet": "GE Aerospace delivered exceptional Q4 results with orders surging 74% and achieving a $190 billion backlog that provides multi-year visibility for defense and commercial aviation segments combined."
+        },
+        {
+          "title": "Trump meets defense executives, touts production boost as US strikes Iran",
           "source": "Reuters",
-          "url": "https://www.reuters.com/technology/pentagon-adopt-palantir-ai-as-core-us-military-system-memo-says-2026-03-20/",
-          "publishedAt": "2026-03-20",
-          "snippet": "Deputy Secretary of Defense Steve Feinberg's order is a significant win for Palantir, which has landed a growing stream of contracts with the U.S. government. Future contracting with Palantir will be handled by the Army."
-        },
-        {
-          "title": "This Year's Defense-Stock Rally Has Largely Stalled Amid the Fighting in the Middle East",
-          "source": "Investopedia",
-          "url": "https://www.investopedia.com/this-year-s-defense-stock-rally-has-largely-stalled-amid-the-fighting-in-the-middle-east-11922315",
-          "publishedAt": "2026-03-08",
-          "snippet": "The iShares U.S. Aerospace & Defense ETF (ITA) as well as the State Street SPDR S&P Aerospace & Defense ETF (XAR), which hold stocks of companies that make defense equipment, are flat to down since the U.S.'s initial strikes on Iran. Investors lately have been panning crowded trades, favoring value over momentum."
-        },
-        {
-          "title": "Better Defense Stock: Lockheed Martin vs. RTX",
-          "source": "The Motley Fool",
-          "url": "https://www.fool.com/investing/2026/03/17/better-defense-stock-lockheed-martin-vs-rtx/",
-          "publishedAt": "2026-03-17",
-          "snippet": "Two defense titans go head to head. RTX Corporation formerly Raytheon, has benefited immensely from the depletion of global missile stockpiles. With a backlog nearing $260 billion, RTX is seeing massive demand for its Patriot and SM-3 missile systems."
-        },
-        {
-          "title": "L3Harris Technologies (LHX) Hits Milestone in AI-Driven Defense Solutions As It Realigns Its Business",
-          "source": "Insider Monkey",
-          "url": "https://www.insidermonkey.com/blog/l3harris-technologies-lhx-hits-milestone-in-ai-driven-defense-solutions-as-it-realigns-its-business-1719196/",
-          "publishedAt": "2026-03-18",
-          "snippet": "On March 11, defense contractor L3Harris Technologies, Inc. announced a breakthrough achievement in autonomous electronic warfare technology. Shares of LHX have gained 3.5% in the past month with a 21.1% year to date return."
+          "url": "https://www.reuters.com/business/aerospace-defense/white-house-press-defense-firms-boost-production-us-strikes-iran-draw-down-2026-03-06/",
+          "publishedAt": "2026-03-06",
+          "snippet": "Companies including Lockheed Martin, RTX, BAE Systems, Boeing, Honeywell Aerospace, L3Harris and Northrop Grumman attended a White House meeting where Trump pressed defense firms to boost production amid military escalation in the Middle East."
         }
       ],
       "socialBuzz": {
         "platform": "reddit",
-        "mentions": 428,
-        "sentiment": "mixed",
+        "mentions": 287,
+        "sentiment": "bullish",
         "topPosts": [
-          "Reddit r/investing: 'I have been heavy in defense stocks since early 2022. The New Cold War is well underway. The world is more and more dangerous. Clock is ticking on Taiwan vs China.'",
-          "Reddit r/investing: 'I have some LMT, NOC, RTX and LHX stock and I'm strongly considering selling them. They are all at ATH after climbing up like crazy in just few months.'",
-          "Reddit r/ValueInvesting: 'Right now, my favorite defense stocks that I'm steadily adding to are: LMT, RTX, GD, DRS, KTOS, AVAV, and ISMAY. Anytime you can get LMT at a price lower than $500, you do it.'",
-          "Reddit r/stocks: 'I'm looking at the etf ITA and wondering why this isn't mooning right now. US is launching missiles by the thousands.'",
-          "Reddit r/investing: 'The RTX engine recall was a textbook example of buying on bad news. Most people only notice a sector after the rally has already happened, and by then the easy money is gone.'"
+          "r/investing discussion: 'Defense sector rally - How are you handling it? Buying in, avoiding it, or somewhere in between?' - Discussion of multi-year spending cycles and European defense opportunities",
+          "r/stocks: 'Global defense stocks jump as U.S., Iran exchange attacks' - Positive reaction to geopolitical escalation impact on sector",
+          "r/investing: 'Which defense stock today looks like a good option?' - South Korean defense ETF (KDEF) and US contractors being discussed as safe bets",
+          "r/investing: 'Lockheed Martin best defense stock of 2025?' - LMT highlighted for steady contracts and 2.8% dividend yield with long-term value proposition",
+          "r/stocks: 'US defense contractor stocks' - Recent discussion noting Kratos 520% IPO surge and general strength across sector in past 3 days"
         ]
       }
     }
   ],
-  "lastUpdated": "2026-03-23T01:23:56.891Z"
+  "lastUpdated": "2026-03-23T02:24:30.895Z"
 }

@@ -1,30 +1,30 @@
-import { MARKET_VERTICALS } from '~/server/config/verticals'
-import type { MoodType, VerticalDetail } from '~/types/market'
-import { readCache, writeCache } from '~/server/utils/fileStore'
+import { MARKET_VERTICALS } from '~/server/config/verticals';
+import type { MoodType, VerticalDetail } from '~/types/market';
+import { readCache, writeCache } from '~/server/utils/fileStore';
 
 export default defineEventHandler(async (event) => {
-  const query = getQuery(event)
-  const forceRefresh = query.refresh === 'true'
+  const query = getQuery(event);
+  const forceRefresh = query.refresh === 'true';
 
   // Always try to read from cache first
-  const cached = await readCache()
+  const cached = await readCache();
 
   // If not force refresh, return cached data (even if empty)
   if (!forceRefresh) {
-    return cached
+    return cached;
   }
 
   // Only fetch fresh data when explicitly requested (refresh=true)
-  console.log('🔄 Force refresh requested - fetching fresh data...')
-  const results: VerticalDetail[] = []
+  console.log('🔄 Force refresh requested - fetching fresh data...');
+  const results: VerticalDetail[] = [];
 
   for (const config of MARKET_VERTICALS) {
     try {
-      console.log(`Analyzing ${config.id}...`)
-      const analysis = await analyzeSentiment(config.id, config)
-      results.push(analysis)
+      console.log(`Analyzing ${config.id}...`);
+      const analysis = await analyzeSentiment(config.id, config);
+      results.push(analysis);
     } catch (error) {
-      console.error(`Error analyzing ${config.id}:`, error)
+      console.error(`Error analyzing ${config.id}:`, error);
       // Return fallback data on error
       results.push({
         id: config.id,
@@ -41,15 +41,15 @@ export default defineEventHandler(async (event) => {
           platform: 'N/A',
           mentions: 0,
           sentiment: 'mixed' as MoodType,
-          topPosts: []
+          topPosts: [],
         },
-        topTickers: []
-      })
+        topTickers: [],
+      });
     }
   }
 
   // Write results to cache file
-  await writeCache(results)
+  await writeCache(results);
 
-  return results
-})
+  return results;
+});
