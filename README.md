@@ -1,27 +1,20 @@
 # Market Mood
 
-A Nuxt application for tracking market sentiment.
+A Nuxt application for sensing market sentiment.
 
 ## Setup
 
 ```bash
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
 ## Development
 
-The app runs at `http://localhost:3000`
+Add your Anthropic API key to `.env`:
 
-## Build
-
-```bash
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
 ```
+ANTHROPIC_API_KEY=your_key_here
+```
+
+From there you can customize the sentiment analysis logic in `server/utils/sentimentAnalyzer.ts`, tune the market verticals to the sectors that matter to you, and build a vibrant mood board with the stories the market is telling right now.
