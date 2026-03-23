@@ -1,18 +1,21 @@
 <template>
-  <div class="flex flex-col gap-30 py-20 min-h-screen justify-center">
+  <div
+    class="flex flex-col gap-0 lg:gap-30 py-10 lg:py-20 min-h-screen justify-center"
+  >
     <header
-      class="max-w-6xl w-full mx-auto flex flex-col sm:flex-row justify-between"
+      class="max-w-6xl w-full mx-auto px-10 flex flex-col lg:flex-row justify-between gap-6 items-center"
     >
-      <div class="logo flex flex-col gap-2">
-        <h1 class="font-display flex gap-2 text-5xl">
+      <div class="logo flex flex-col gap-2 items-center lg:items-start">
+        <h1 class="font-display flex gap-2 text-3xl sm:text-5xl">
           <span>Market</span><span class="font-bold">Mood</span>
         </h1>
-        <span class="uppercase text-lg tracking-[.5rem] text-light/70"
+        <span
+          class="uppercase text-sm sm:text-lg tracking-[.5rem] text-light/70 text-center lg:text-left"
           >Sentiment Sensor</span
         >
       </div>
       <div class="stats flex flex-col sm:flex-row items-center gap-6">
-        <div class="flex-col text-right hidden sm:flex">
+        <div class="flex-col text-right hidden lg:flex">
           <span>Hello, Nadia</span>
           <span>Last refresh: Mar 3, 12:45pm</span>
         </div>
@@ -55,7 +58,7 @@
               vertical.title
             }}</span>
 
-            <span class="factors mt-20 flex flex-col gap-4">
+            <span class="factors mt-20 flex flex-col gap-4 flex-1 justify-end">
               <a
                 v-for="(article, i) in vertical.news.slice(
                   0,
@@ -85,6 +88,9 @@
 <script setup lang="ts">
 const { verticals, loading, error, refresh } = useMarketVerticals();
 
+const breakpoints = useBreakpoints({ md: 1380 });
+const isMobile = breakpoints.smaller('md');
+
 const MOOD_ORDER = { bullish: 0, mixed: 1, bearish: 2 } as const;
 
 const sortedVerticals = computed(() =>
@@ -103,7 +109,11 @@ const enrichedVerticals = computed(() => {
       isAlt = mixedCount >= 2;
       mixedCount++;
     }
-    return { ...vertical, isAlt, newsCount: i % 2 === 0 ? 3 : 5 };
+    return {
+      ...vertical,
+      isAlt,
+      newsCount: isMobile.value ? 3 : i % 2 === 0 ? 3 : 5,
+    };
   });
 });
 
@@ -122,7 +132,7 @@ const enrichedVerticals = computed(() => {
 }
 
 /* ── Mobile swipe slider ── */
-@media (max-width: 768px) {
+@media (max-width: 1380px) {
   /* .cards-wrap becomes the scroll container so .cards has no overflow
      constraints — the card glows (::before, inset:-10px, blur:20px) can
      then overflow .cards freely and only need to fit inside .cards-wrap's
@@ -154,9 +164,9 @@ const enrichedVerticals = computed(() => {
   /* Targets MoodCard's root .pod-wrap — Vue 3 allows parent scoped CSS
      to style a child component's root element without :deep() */
   .pod-wrap {
-    --card-w: 85vw;
-    width: 85vw;
-    min-width: 85vw;
+    --card-w: 250px;
+    width: 250px;
+    min-width: 250px;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
