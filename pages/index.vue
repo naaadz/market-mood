@@ -47,13 +47,21 @@
         </p>
       </div>
       <div v-else class="cards-wrap flex justify-center">
-        <div class="cards flex gap-8 items-center">
+        <TransitionGroup
+          tag="div"
+          appear
+          name="card-fade"
+          class="cards flex gap-8 items-center"
+        >
           <mood-card
-            v-for="vertical in enrichedVerticals"
+            v-for="(vertical, i) in enrichedVerticals"
             :key="vertical.id"
             :mood="vertical.mood"
             :class="{ alt: vertical.isAlt }"
-            :style="{ '--mood-bg-pos': vertical.bgPos }"
+            :style="{
+              '--mood-bg-pos': vertical.bgPos,
+              '--delay': `${i * 0.12}s`,
+            }"
           >
             <span
               class="badge self-start text-sm rounded-full py-1 px-3 capitalize"
@@ -98,7 +106,7 @@
               </a>
             </span>
           </mood-card>
-        </div>
+        </TransitionGroup>
       </div>
     </main>
     <footer
@@ -174,6 +182,22 @@ const lastRefreshed = computed(() => {
 </script>
 
 <style scoped>
+/* ── Card fade-in transition ── */
+.card-fade-enter-active {
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  transition-delay: var(--delay, 0s);
+}
+.card-fade-enter-from {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.card-fade-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ── Mobile swipe slider ── */
 @media (max-width: 1380px) {
   /* .cards-wrap becomes the scroll container so .cards has no overflow
