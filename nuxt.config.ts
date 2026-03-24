@@ -13,8 +13,7 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    anthropicApiKey: '',
+    deepseekApiKey: '',
     braveSearchApiKey: '',
-    claudeModel: 'claude-haiku-4-5',
   },
 });

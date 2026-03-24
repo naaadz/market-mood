@@ -1,11 +1,12 @@
 import type { VerticalDetail } from '~/types/market';
 import { executeWithRateLimit } from './rateLimit';
+import { getDeepSeekClient, getModel, SEARCH_TOOL_DEFINITION } from './llm';
 
 export async function analyzeSentiment(
   verticalId: string,
   verticalConfig: any
 ): Promise<VerticalDetail> {
-  const client = getAnthropicClient();
+  const client = getDeepSeekClient();
 
   const systemPrompt = `You are a financial sentiment analyzer. Your task is to:
 
@@ -55,64 +56,62 @@ ${verticalConfig.description}
 
 Search for recent news and social media discussions from the past 48 hours. Identify the most mentioned tickers and provide your sentiment analysis.`;
 
-  let messages: any[] = [{ role: 'user', content: userPrompt }];
+  let messages: any[] = [
+    { role: 'system', content: systemPrompt },
+    { role: 'user', content: userPrompt },
+  ];
 
   // Tool calling loop
   while (true) {
-    const response = await client.messages.create({
+    const response = await client.chat.completions.create({
       model: getModel(),
       max_tokens: 4096,
-      system: systemPrompt,
       tools: [SEARCH_TOOL_DEFINITION],
       messages,
     });
 
-    // Check if Claude wants to use the search tool (could be multiple parallel calls)
-    const toolUses = response.content.filter(
-      (block: any) => block.type === 'tool_use'
-    );
+    const message = response.choices[0]?.message;
+    if (!message) break;
 
-    if (toolUses.length > 0) {
+    // Check if the model wants to use the search tool
+    const toolCalls = message.tool_calls ?? [];
+
+    if (toolCalls.length > 0) {
       console.log(
-        `[${verticalId}] Claude requested ${toolUses.length} searches`
+        `[${verticalId}] DeepSeek requested ${toolCalls.length} searches`
       );
 
+      // Add assistant message with tool calls to history
+      messages.push(message);
+
       // Execute searches sequentially with 1 second delay (Brave API rate limit: 1 req/sec)
-      const searchTasks = toolUses.map((toolUse: any) => async () => {
-        console.log(`[${verticalId}] Searching: "${toolUse.input.query}"`);
-        const searchResults = await executeSearch(
-          toolUse.input.query,
-          toolUse.input.hours || 48
-        );
+      const searchTasks = toolCalls.map((toolCall: any) => async () => {
+        const args = JSON.parse(toolCall.function.arguments);
+        console.log(`[${verticalId}] Searching: "${args.query}"`);
+        const searchResults = await executeSearch(args.query, args.hours || 48);
         console.log(
-          `[${verticalId}] Found ${searchResults.length} results for "${toolUse.input.query}"`
+          `[${verticalId}] Found ${searchResults.length} results for "${args.query}"`
         );
 
         return {
-          type: 'tool_result',
-          tool_use_id: toolUse.id,
+          role: 'tool' as const,
+          tool_call_id: toolCall.id,
           content: JSON.stringify(searchResults),
         };
       });
 
       const toolResults = await executeWithRateLimit(searchTasks, 1000);
 
-      // Add all tool results to messages
-      messages.push(
-        { role: 'assistant', content: response.content },
-        { role: 'user', content: toolResults }
-      );
+      // Add tool results to messages
+      messages.push(...toolResults);
 
-      continue; // Continue the loop for Claude to process results
+      continue; // Continue the loop for the model to process results
     }
 
     // No more tool calls - extract final response
-    const textBlock = response.content.find(
-      (block): block is Extract<typeof block, { type: 'text' }> =>
-        block.type === 'text'
-    );
-    if (textBlock) {
-      const analysis = parseClaudeResponse(textBlock.text);
+    const text = message.content;
+    if (text) {
+      const analysis = parseResponse(text);
 
       return {
         id: verticalId,
@@ -135,15 +134,15 @@ Search for recent news and social media discussions from the past 48 hours. Iden
 
   throw createError({
     statusCode: 500,
-    message: 'Failed to get analysis from Claude',
+    message: 'Failed to get analysis from DeepSeek',
   });
 }
 
-function parseClaudeResponse(text: string): Partial<VerticalDetail> {
-  // Extract JSON from Claude's response (may be wrapped in markdown)
+function parseResponse(text: string): Partial<VerticalDetail> {
+  // Extract JSON from the response (may be wrapped in markdown code blocks)
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) {
-    throw new Error('No JSON found in Claude response');
+    throw new Error('No JSON found in response');
   }
 
   return JSON.parse(jsonMatch[0]);
