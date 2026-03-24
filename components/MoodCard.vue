@@ -53,7 +53,7 @@ defineProps<{
     border-radius: 32px;
     background: linear-gradient(to right, var(--color-from), var(--color-to));
     filter: blur(20px);
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: -1;
     transition: opacity 0.35s ease;
   }
@@ -145,9 +145,9 @@ defineProps<{
   --color-stroke: var(--color-green);
   --curve-fill-color: var(--color-green);
   --curve-x: -0.02;
-  --curve-y: 0.21;
-  --curve-scale: 3.6;
-  --mask-size: 900px;
+  --curve-y: 0;
+  --curve-scale: 4.2;
+  --mask-size: 1050px;
 }
 
 .pod-wrap.bullish .card-bg {

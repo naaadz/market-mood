@@ -82,7 +82,7 @@
               vertical.title
             }}</span>
 
-            <span class="factors mt-20 flex flex-col gap-4 flex-1 justify-end">
+            <span class="factors mt-25 flex flex-col gap-4 flex-1 justify-end">
               <a
                 v-for="(article, i) in vertical.news.slice(
                   0,
