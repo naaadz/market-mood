@@ -23,16 +23,21 @@
 
     <!-- Content -->
     <div class="card-content flex flex-col gap-4 p-8 h-full">
-      <slot />
+      <slot :hovering="isHovering" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useCurrentElement, useElementHover } from '@vueuse/core';
+
 defineProps<{
   mood: 'bullish' | 'mixed' | 'bearish';
   alt?: boolean;
 }>();
+
+const el = useCurrentElement();
+const isHovering = useElementHover(el);
 </script>
 
 <style scoped>

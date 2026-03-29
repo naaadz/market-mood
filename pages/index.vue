@@ -62,6 +62,7 @@
               '--mood-bg-pos': vertical.bgPos,
               '--delay': `${i * 0.12}s`,
             }"
+            v-slot="{ hovering }"
           >
             <span
               class="badge self-start text-sm rounded-full py-1 px-3 capitalize"
@@ -70,22 +71,7 @@
             >
               {{ vertical.mood }} {{ vertical.confidence }}%
             </span>
-            <span class="tickers flex gap-2">
-              <span
-                v-for="ticker in vertical.topTickers.slice(0, 3)"
-                :key="ticker.ticker"
-                class="ticker-item flex gap-1"
-              >
-                {{ ticker.ticker
-                }}<span class="ticker-caret" :class="ticker.sentiment">{{
-                  ticker.sentiment === 'bearish'
-                    ? '▼'
-                    : ticker.sentiment === 'mixed'
-                      ? '—'
-                      : '▲'
-                }}</span>
-              </span>
-            </span>
+            <mood-tickers :tickers="vertical.topTickers" :hovering="hovering" />
             <span class="title font-display text-4xl">{{
               vertical.title
             }}</span>
