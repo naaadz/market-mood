@@ -16,13 +16,4 @@ export default defineNuxtConfig({
     deepseekApiKey: '',
     braveSearchApiKey: '',
   },
-
-  nitro: {
-    serverAssets: [
-      {
-        baseName: 'cache',
-        dir: './.cache',
-      },
-    ],
-  },
 });

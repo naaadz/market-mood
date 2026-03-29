@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import type { VerticalDetail } from '~/types/market';
+import bundledData from '../../.cache/market-data.json';
 
 const CACHE_DIR = join(process.cwd(), '.cache');
 const CACHE_FILE = join(CACHE_DIR, 'market-data.json');
@@ -11,13 +12,8 @@ interface CacheData {
   lastUpdated: string;
 }
 
-/**
- * Read cached data from file.
- * On Netlify, falls back to the bundled server asset since the runtime
- * filesystem is ephemeral and the .cache dir cannot be written persistently.
- */
 export async function readCache(): Promise<VerticalDetail[]> {
-  // Try the runtime filesystem first (works locally)
+  // Try the runtime filesystem first (works locally and picks up refresh=true writes)
   try {
     if (existsSync(CACHE_FILE)) {
       const content = await readFile(CACHE_FILE, 'utf-8');
@@ -28,15 +24,8 @@ export async function readCache(): Promise<VerticalDetail[]> {
     console.error('Error reading cache from filesystem:', error);
   }
 
-  // Fall back to the bundled server asset (works on Netlify)
-  try {
-    const storage = useStorage('assets:cache');
-    const data = await storage.getItem<CacheData>('market-data.json');
-    return data?.verticals || [];
-  } catch (error) {
-    console.error('Error reading cache from server assets:', error);
-    return [];
-  }
+  // Fall back to the JSON bundled at build time (works on Netlify)
+  return (bundledData as CacheData).verticals || [];
 }
 
 /**
