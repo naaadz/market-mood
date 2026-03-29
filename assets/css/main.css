@@ -33,11 +33,11 @@ body::after {
   inset: 0;
   background: linear-gradient(
     to right,
-    #22eca3,
-    #227aec,
-    #7270fd,
-    #fd70fb,
-    #ff6c86
+    var(--color-green),
+    var(--color-blue),
+    var(--color-purple),
+    var(--color-pink),
+    var(--color-orange)
   );
   mask-image: url('/assets/images/globe.png');
   mask-size: cover;
