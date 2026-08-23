@@ -241,7 +241,7 @@ const lastRefreshed = computed(() => {
           opacity: 0;
         }
         &::before {
-          opacity: 0.4;
+          opacity: 0.16;
         }
       }
     }
